@@ -150,6 +150,7 @@ GameObject:
   - component: {fileID: 1834793923753187916}
   - component: {fileID: 8485155303965112036}
   - component: {fileID: 8346038245560909845}
+  - component: {fileID: 2189920901064000709}
   m_Layer: 5
   m_Name: ColorBar
   m_TagString: Untagged
@@ -164,7 +165,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6131422102840746507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.00017783258, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -275,3 +276,80 @@ MonoBehaviour:
   Image: {fileID: 1834793923753187916}
   Text: {fileID: 1081802390626558119}
   Button: {fileID: 8485155303965112036}
+  ErrorAnimation: {fileID: 2189920901064000709}
+--- !u!114 &2189920901064000709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6131422102840746507}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e807c6b019e74654b38b251dbbb5259f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FirAnimations.FirRotationAnimation
+  EditorEnable: 0
+  Loop: 0
+  Curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.06560749
+      value: 1
+      inSlope: 1.8687853
+      outSlope: -1.8482509
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.6378271
+    - serializedVersion: 3
+      time: 0.21051686
+      value: 0
+      inSlope: -1.5762985
+      outSlope: 1.5789663
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.53492844
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.38742176
+      value: 1
+      inSlope: 1.2251564
+      outSlope: -1.242581
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.3876505
+    - serializedVersion: 3
+      time: 0.6447935
+      value: 0
+      inSlope: -0.6358468
+      outSlope: 0.710413
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0.33879182
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  StartZoom: {x: -0, y: 0, z: 10}
+  EndZoom: {x: -0, y: 0, z: -10}

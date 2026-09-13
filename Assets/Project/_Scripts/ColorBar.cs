@@ -1,3 +1,5 @@
+using System;
+using FirAnimations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,4 +10,21 @@ public class ColorBar : MonoBehaviour
     public Image Image;
     public TextMeshProUGUI Text;
     public Button Button;
+    public FirRotationAnimation ErrorAnimation;
+    
+    private void Start()
+    {
+        Button.onClick.AddListener(TryWork);
+    }
+
+    public void TryWork()
+    {
+        if (transform.GetSiblingIndex() != 0)
+            ErrorAnimation.Play();
+    }
+
+    private void OnDestroy()
+    {
+        Button.onClick.RemoveAllListeners();
+    }
 }
