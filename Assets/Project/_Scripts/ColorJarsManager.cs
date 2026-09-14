@@ -8,6 +8,7 @@ public class ColorJarsManager : MonoBehaviour
     public Vector2Int JarNumberMinMax;
     public RectTransform[] Collumns;
     public ColorBar BarPrefab;
+    public WorkerManager WorkerManager;
     
     public void Initialize()
     {
@@ -78,5 +79,6 @@ public class ColorJarsManager : MonoBehaviour
             columnIndex++;
             columnIndex %= Collumns.Length;
         }
+        ColorBar.WorkerManager = WorkerManager;
     }
 }

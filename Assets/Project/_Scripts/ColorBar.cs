@@ -1,4 +1,3 @@
-using System;
 using FirAnimations;
 using TMPro;
 using UnityEngine;
@@ -11,6 +10,7 @@ public class ColorBar : MonoBehaviour
     public TextMeshProUGUI Text;
     public Button Button;
     public FirRotationAnimation ErrorAnimation;
+    public static WorkerManager WorkerManager;
     
     private void Start()
     {
@@ -21,6 +21,8 @@ public class ColorBar : MonoBehaviour
     {
         if (transform.GetSiblingIndex() != 0)
             ErrorAnimation.Play();
+        else
+            WorkerManager.AddColorBar(this);
     }
 
     private void OnDestroy()
