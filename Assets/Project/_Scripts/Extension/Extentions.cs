@@ -39,4 +39,18 @@ public static class Extentions
                 Object.Destroy(transform.GetChild(i).gameObject);
         }
     }
+    
+    public static bool TryFindIndex<T>(this T[,] array, T target, out int i, out int j)
+        where T : class
+    {
+        int rows = array.GetLength(0);
+        int cols = array.GetLength(1);
+        for (i = 0; i < rows; i++)
+            for (j = 0; j < cols; j++)
+                if (ReferenceEquals(array[i, j], target))
+                    return true;
+
+        i = j = -1;
+        return false;
+    }
 }

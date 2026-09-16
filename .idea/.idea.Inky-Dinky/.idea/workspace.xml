@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/WorkerPlace.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/WorkerPlace.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Pointy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Pointy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Extension/Extentions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Extension/Extentions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/WorkerManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/WorkerPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/WorkerPlace.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-MainImageSurface.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene/NavMesh-MainImageSurface.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
@@ -19,10 +28,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1eb9db207454431c84a47bcd81e79c3746ae00/6b/553687d2/List`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31f3cd5c2a074982a9d5664e7709cac1212400/92/c563cc45/Component.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31f3cd5c2a074982a9d5664e7709cac1212400/e3/d3eea4d8/Object.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/_Scripts/Extension/Extentions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Majong/Repo/Mahjong/Assets/Project/_Scripts/Core/TilePool.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -36,6 +51,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
@@ -90,7 +106,9 @@
       <updated>1789063710934</updated>
       <workItem from="1789063711957" duration="31000" />
       <workItem from="1789300958550" duration="15064000" />
-      <workItem from="1789374398325" duration="8003000" />
+      <workItem from="1789374398325" duration="8082000" />
+      <workItem from="1789457913608" duration="17850000" />
+      <workItem from="1789547297181" duration="8497000" />
     </task>
     <servers />
   </component>
@@ -101,6 +119,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>

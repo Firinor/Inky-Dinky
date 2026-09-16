@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3272880640850864515}
   - component: {fileID: 7944165420054317363}
+  - component: {fileID: 5634213936582358186}
   m_Layer: 0
   m_Name: Pointy
   m_TagString: Untagged
@@ -91,3 +92,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &5634213936582358186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147892472309783033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efa972ec52f2d24bb4b0cd3099d3ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointyPlace
+  Renderer: {fileID: 7944165420054317363}
+  Neighbors: []
