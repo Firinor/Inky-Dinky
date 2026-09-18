@@ -274,7 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1001 &220987138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -469,7 +471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1 &244719266
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1001 &371019427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1968,8 +1974,10 @@ MonoBehaviour:
   - {fileID: 2118101997}
   - {fileID: 232822817}
   - {fileID: 2001398069}
-  WorkerPerfab: {fileID: 0}
+  WorkerPerfab: {fileID: 2871306184796754369, guid: 74f951364675abd4484b6561a9637f48, type: 3}
   WorkerPool: {fileID: 1881753249}
+  PointyPool: {fileID: 1985770962}
+  MainImage: {fileID: 1327980315}
 --- !u!1 &827668175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2058,7 +2066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1001 &843044166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2490,81 +2500,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7755983703435534038, guid: 33d1fe6b2578bd1489463b0a102fc3c1, type: 3}
   m_PrefabInstance: {fileID: 1026113590}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1041564213
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1041564214}
-  - component: {fileID: 1041564216}
-  - component: {fileID: 1041564215}
-  m_Layer: 5
-  m_Name: Worker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1041564214
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041564213}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1964527832}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -245.19}
-  m_SizeDelta: {x: 32, y: 64}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1041564215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041564213}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1041564216
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041564213}
-  m_CullTransparentMesh: 1
 --- !u!1 &1080215938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2653,7 +2588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1001 &1160796097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3704,7 +3641,7 @@ GameObject:
   - component: {fileID: 1468138283}
   - component: {fileID: 1468138284}
   m_Layer: 5
-  m_Name: Workers
+  m_Name: WorkersPlaceOpen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3848,7 +3785,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1001 &1744619625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4076,7 +4015,7 @@ GameObject:
   - component: {fileID: 1776873388}
   - component: {fileID: 1776873389}
   m_Layer: 5
-  m_Name: Workers (1)
+  m_Name: WorkersPlaceCloset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4542,7 +4481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1 &1964527828
 GameObject:
   m_ObjectHideFlags: 0
@@ -4642,7 +4583,6 @@ RectTransform:
   - {fileID: 1468138283}
   - {fileID: 1776873388}
   - {fileID: 244719267}
-  - {fileID: 1041564214}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4769,7 +4709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1 &2041255845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,7 +4921,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1 &2118101993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,7 +5012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
+  Cooldown: 1
   bar: {fileID: 0}
+  cooldown: 2
 --- !u!1001 &637995101576171615
 PrefabInstance:
   m_ObjectHideFlags: 0

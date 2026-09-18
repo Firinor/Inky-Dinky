@@ -61,6 +61,7 @@ public class MainImageManager : MonoBehaviour
         PointyPlace deadEnd = Instantiate(PointyPrefab, PointyPool);
         deadEnd.gameObject.SetActive(false);
         deadEnd.name = "DeadEnd";
+        deadEnd.IsDeadEnd = true;
         
         for (int y = 0; y < h; y++)
         {
@@ -77,6 +78,8 @@ public class MainImageManager : MonoBehaviour
                 pointy.transform.localScale = Vector3.one * PointyScale;
                 pointy.Renderer.color = c;
                 pointy.Neighbors = new PointyPlace[4];
+                if (y == 0)
+                    pointy.WayCost = 0;
 
                 created++;
                 if (created >= maxPointyCount) 

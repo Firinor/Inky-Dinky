@@ -42,7 +42,22 @@ public class WorkerManager : MonoBehaviour
                 continue;
             
             Worker newWorker = GetWorker();
-            
+            newWorker.transform.position = workerPlace.transform.position;
+            newWorker.Way = way;
+            newWorker.Sprite.color = workerPlace.bar.Image.color;
+            newWorker.ToStart();
+            newWorker.OnEndWay = () =>
+            {
+                foreach (PointyPlace place in MainImage.Places)
+                {
+                    place.InCheck = false;
+                }
+                targer.Eat();
+            };
+            newWorker.gameObject.SetActive(true);
+
+            targer.InGame = false;
+            workerPlace.enabled = true;
         }
     }
     
@@ -67,13 +82,14 @@ public class WorkerManager : MonoBehaviour
         IOrderedEnumerable<PointyPlace> listBars = MainImage.Places
             .Cast<PointyPlace>()
             .Where(bar => bar.IsOpen)
+            .Where(bar => bar.InGame)
             .Where(bar => bar.Renderer.color == workerPlace.bar.Image.color)
             .OrderBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude);
 
         result = listBars.FirstOrDefault();
         if (result is null)
             return result;
-
+        
         way = GetWay(result);
         
         return result;
@@ -81,19 +97,40 @@ public class WorkerManager : MonoBehaviour
 
     private List<Vector3> GetWay(PointyPlace startPoint)
     {
-        float floor = MainImage.Places[0, 0].transform.position.y;
-        MainImage.Places.TryFindIndex(startPoint, out int i, out int j);
+        List<PointyPlace> result = new List<PointyPlace> { startPoint };
 
-        if (i == -1)
-            return null;
-        
-        if (startPoint.transform.position.y - floor < 0.01f)
-            return new List<Vector3> { startPoint.transform.position };
+        PointyPlace currentPoint = startPoint;
+        while (currentPoint.WayCost > 0)
+        {
+            PointyPlace nextPoint = null;
+            foreach (PointyPlace pointNeighbor in currentPoint.Neighbors)
+            {
+                if(pointNeighbor == null)
+                    continue;
+                if(pointNeighbor.InGame)
+                    continue;
+                if (nextPoint == null)
+                {
+                    nextPoint = pointNeighbor;
+                    continue; 
+                }
+                if(pointNeighbor.WayCost < nextPoint.WayCost)
+                    nextPoint = pointNeighbor;
+            }
 
-        Dictionary<PointyPlace, int> costs = new();
+            currentPoint = nextPoint;
+            result.Add(currentPoint);
+        }
+
+        List<Vector3> resultVector = new();
+
+        result.Reverse();
         
+        foreach (PointyPlace place in result)
+        {
+            resultVector.Add(place.transform.position);
+        }
         
-        
-        return null;
+        return resultVector;
     }
 }
