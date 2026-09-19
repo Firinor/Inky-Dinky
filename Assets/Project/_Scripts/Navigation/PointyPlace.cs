@@ -1,4 +1,6 @@
+using System;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class PointyPlace : MonoBehaviour
@@ -7,11 +9,11 @@ public class PointyPlace : MonoBehaviour
     public int WayCost = int.MaxValue;
     public PointyPlace[] Neighbors;
     public bool InGame = true;
+    public TextMeshProUGUI textTemp;
 
     public bool IsDeadEnd = false;
-    public bool InCheck = false;
-    
-    public bool IsOpen => Neighbors.Any(n => n == null || !n.InGame);
+
+    public bool IsOpen => Neighbors.Any(n => n == null || (!n.InGame && n.WayCost < int.MaxValue));
 
     public void Eat()
     {
@@ -22,25 +24,37 @@ public class PointyPlace : MonoBehaviour
 
     private void CheckWayCost()
     {
-        int cost = int.MaxValue;
-        foreach (PointyPlace place in Neighbors)
+        if(InGame)
+            return;
+        
+        PointyPlace bestNeighbor = Neighbors
+            .Where(place => place != null
+                            && !place.IsDeadEnd
+                            && !place.InGame)
+            .OrderBy(n => n.transform.position.y)
+            .ThenBy(n => n.WayCost)
+            .FirstOrDefault();
+        
+        if(bestNeighbor == null)
+            return;
+        if (bestNeighbor.WayCost > WayCost)
         {
-            if(place is null)
-                continue;
-            if(place.IsDeadEnd)
-                continue;
-            if(place.InCheck)
-                continue;
-            if(place.IsDeadEnd)
-                continue;
-            if(place.WayCost >= cost)
-                continue;
-            cost = place.WayCost;
-            InCheck = true;
-            place.CheckWayCost();
+            Debug.LogError($"bestNeighbor.WayCost({bestNeighbor.WayCost}) > WayCost ({WayCost})");
+            throw new Exception();
         }
-        if(cost < int.MaxValue
-           && cost < WayCost)
-            WayCost = cost + 1;
+        
+        WayCost = Math.Min(WayCost, bestNeighbor.WayCost + 1);
+        textTemp.text = WayCost.ToString();
+        foreach (PointyPlace pointyPlace in Neighbors)
+        {
+            if(pointyPlace == null)
+                continue;
+            if(pointyPlace.WayCost == 0)
+                continue;
+            if(pointyPlace.WayCost <= WayCost+1)
+                continue;
+            
+            pointyPlace.CheckWayCost();
+        }
     }
 }

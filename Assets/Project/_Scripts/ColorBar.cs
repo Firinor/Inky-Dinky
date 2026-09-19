@@ -22,7 +22,10 @@ public class ColorBar : MonoBehaviour
         if (transform.GetSiblingIndex() != 0)
             ErrorAnimation.Play();
         else
+        {
+            Button.onClick.RemoveAllListeners();
             WorkerManager.AddColorBar(this);
+        }
     }
 
     private void OnDestroy()

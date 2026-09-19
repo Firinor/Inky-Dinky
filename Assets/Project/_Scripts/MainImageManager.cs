@@ -74,6 +74,7 @@ public class MainImageManager : MonoBehaviour
                 float py = (y - pivot.y) * deltaY + deltaY/2;
 
                 PointyPlace pointy = Instantiate(PointyPrefab, PointyPool);
+                pointy.name = pointy.name + $"X{x}Y{y}";
                 pointy.transform.localPosition = new Vector3(px, py, 0f);
                 pointy.transform.localScale = Vector3.one * PointyScale;
                 pointy.Renderer.color = c;
@@ -121,8 +122,8 @@ public class MainImageManager : MonoBehaviour
 
 public enum ESide
 {
-    Left = 0,
-    Right = 1,
-    Up = 2,
-    Down = 3,
+    Down = 0,
+    Left = 1,
+    Right = 2,
+    Up = 3,
 }

@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Worker
   Way: []
-  speed: 1
+  speed: 5
   Sprite: {fileID: 4995046809243313260}

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -40,6 +41,9 @@ public class WorkerManager : MonoBehaviour
             PointyPlace targer = GetColorBar(workerPlace, out List<Vector3> way);
             if(targer is null)
                 continue;
+
+            workerPlace.bar.Count--;
+            workerPlace.bar.Text.text = workerPlace.bar.Count.ToString();
             
             Worker newWorker = GetWorker();
             newWorker.transform.position = workerPlace.transform.position;
@@ -48,10 +52,6 @@ public class WorkerManager : MonoBehaviour
             newWorker.ToStart();
             newWorker.OnEndWay = () =>
             {
-                foreach (PointyPlace place in MainImage.Places)
-                {
-                    place.InCheck = false;
-                }
                 targer.Eat();
             };
             newWorker.gameObject.SetActive(true);
@@ -79,14 +79,14 @@ public class WorkerManager : MonoBehaviour
         PointyPlace result = null;
         way = new();
         
-        IOrderedEnumerable<PointyPlace> listBars = MainImage.Places
+        result = MainImage.Places
             .Cast<PointyPlace>()
             .Where(bar => bar.IsOpen)
             .Where(bar => bar.InGame)
             .Where(bar => bar.Renderer.color == workerPlace.bar.Image.color)
-            .OrderBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude);
-
-        result = listBars.FirstOrDefault();
+            .OrderBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)
+            .FirstOrDefault();
+        
         if (result is null)
             return result;
         
@@ -102,23 +102,18 @@ public class WorkerManager : MonoBehaviour
         PointyPlace currentPoint = startPoint;
         while (currentPoint.WayCost > 0)
         {
-            PointyPlace nextPoint = null;
-            foreach (PointyPlace pointNeighbor in currentPoint.Neighbors)
-            {
-                if(pointNeighbor == null)
-                    continue;
-                if(pointNeighbor.InGame)
-                    continue;
-                if (nextPoint == null)
-                {
-                    nextPoint = pointNeighbor;
-                    continue; 
-                }
-                if(pointNeighbor.WayCost < nextPoint.WayCost)
-                    nextPoint = pointNeighbor;
-            }
+            var bestNeighbor = currentPoint.Neighbors
+                .Where(place => place != null
+                                && !place.IsDeadEnd
+                                && !result.Contains(place))
+                .OrderBy(n => n.WayCost)
+                .ThenBy(bar => bar.transform.position.y)
+                .FirstOrDefault();
 
-            currentPoint = nextPoint;
+            if (bestNeighbor == null)
+                throw new Exception();
+            
+            currentPoint = bestNeighbor;
             result.Add(currentPoint);
         }
 
