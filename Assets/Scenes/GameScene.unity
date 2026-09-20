@@ -274,9 +274,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1001 &220987138
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -471,9 +471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1 &244719266
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,9 +943,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1001 &371019427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2066,9 +2066,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1001 &843044166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2588,9 +2588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1001 &1160796097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3785,9 +3785,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1001 &1744619625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4481,9 +4481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1 &1964527828
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,9 +4709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1 &2041255845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4921,9 +4921,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1 &2118101993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,9 +5012,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 350cc59645a44748846bf454c7c40d5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkerPlace
-  Cooldown: 1
+  Cooldown: 0.7
   bar: {fileID: 0}
-  cooldown: 2
+  cooldown: 0
 --- !u!1001 &637995101576171615
 PrefabInstance:
   m_ObjectHideFlags: 0

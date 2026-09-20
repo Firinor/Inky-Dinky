@@ -24,7 +24,7 @@ public class Worker : MonoBehaviour
             speed * Time.deltaTime
         );
         
-        if(Vector3.Distance(transform.position, Way[wayIndex]) < 0.1f)
+        if(Vector3.Distance(transform.position, Way[wayIndex]) < 0.01f)
         {
             wayIndex++;
             if (wayIndex >= Way.Count)

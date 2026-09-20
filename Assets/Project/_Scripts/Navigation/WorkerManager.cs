@@ -39,8 +39,12 @@ public class WorkerManager : MonoBehaviour
                 continue;
             
             PointyPlace targer = GetColorBar(workerPlace, out List<Vector3> way);
-            if(targer is null)
+            if (targer is null)
+            {
+                workerPlace.enabled = true;
+                workerPlace.AddCooldown(1f);
                 continue;
+            }
 
             workerPlace.bar.Count--;
             workerPlace.bar.Text.text = workerPlace.bar.Count.ToString();
@@ -57,7 +61,16 @@ public class WorkerManager : MonoBehaviour
             newWorker.gameObject.SetActive(true);
 
             targer.InGame = false;
-            workerPlace.enabled = true;
+            targer.CheckWayCost();
+            if (workerPlace.bar.Count <= 0)
+            {
+                Destroy(workerPlace.bar.gameObject);
+                workerPlace.bar = null;
+            }
+            else
+            {
+                workerPlace.enabled = true;
+            }
         }
     }
     
@@ -84,7 +97,8 @@ public class WorkerManager : MonoBehaviour
             .Where(bar => bar.IsOpen)
             .Where(bar => bar.InGame)
             .Where(bar => bar.Renderer.color == workerPlace.bar.Image.color)
-            .OrderBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)
+            .OrderBy(bar => bar.BestNeighborWayCost)
+            .ThenBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)
             .FirstOrDefault();
         
         if (result is null)

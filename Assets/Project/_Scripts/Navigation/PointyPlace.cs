@@ -9,31 +9,41 @@ public class PointyPlace : MonoBehaviour
     public int WayCost = int.MaxValue;
     public PointyPlace[] Neighbors;
     public bool InGame = true;
-    public TextMeshProUGUI textTemp;
+    //public TextMeshProUGUI textTemp;
 
     public bool IsDeadEnd = false;
+    
+    public PointyPlace BestNeighbor => Neighbors
+        .Where(place => place != null
+            && !place.IsDeadEnd
+            && !place.InGame)
+        .OrderBy(n => n.WayCost)
+        .FirstOrDefault();
+
+    public int BestNeighborWayCost
+    {
+        get
+        {
+            PointyPlace bestNeighbor = BestNeighbor;
+            if (bestNeighbor == null)
+                return int.MaxValue;
+            return bestNeighbor.WayCost;
+        }
+    }
 
     public bool IsOpen => Neighbors.Any(n => n == null || (!n.InGame && n.WayCost < int.MaxValue));
 
     public void Eat()
     {
         Renderer.enabled = false;
-        InGame = false;
-        CheckWayCost();
     }
 
-    private void CheckWayCost()
+    public void CheckWayCost()
     {
         if(InGame)
             return;
-        
-        PointyPlace bestNeighbor = Neighbors
-            .Where(place => place != null
-                            && !place.IsDeadEnd
-                            && !place.InGame)
-            .OrderBy(n => n.transform.position.y)
-            .ThenBy(n => n.WayCost)
-            .FirstOrDefault();
+
+        PointyPlace bestNeighbor = BestNeighbor;
         
         if(bestNeighbor == null)
             return;
@@ -44,7 +54,7 @@ public class PointyPlace : MonoBehaviour
         }
         
         WayCost = Math.Min(WayCost, bestNeighbor.WayCost + 1);
-        textTemp.text = WayCost.ToString();
+        //textTemp.text = WayCost.ToString();
         foreach (PointyPlace pointyPlace in Neighbors)
         {
             if(pointyPlace == null)

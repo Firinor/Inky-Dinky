@@ -16,4 +16,9 @@ public class WorkerPlace : MonoBehaviour
             enabled = false;
         }
     }
+
+    public void AddCooldown(float value)
+    {
+        cooldown += value;
+    }
 }
