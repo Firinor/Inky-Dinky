@@ -13,7 +13,7 @@ public class WorkerManager : MonoBehaviour
 
     private List<Worker> workers;
 
-    public void AddColorBar(ColorBar bar)
+    public bool TryAddColorBar(ColorBar bar)
     {
         foreach (var workerPlace in Places)
         {
@@ -23,10 +23,10 @@ public class WorkerManager : MonoBehaviour
             workerPlace.bar = bar;
             bar.transform.SetParent(workerPlace.transform);
             bar.transform.localPosition = Vector3.zero;
-            return;
+            return true;
         }
         
-        bar.ErrorAnimation.Play();
+        return false;
     }
 
     private void Update()
@@ -96,6 +96,7 @@ public class WorkerManager : MonoBehaviour
             .Cast<PointyPlace>()
             .Where(bar => bar.IsOpen)
             .Where(bar => bar.InGame)
+            //.Where(bar => bar.Renderer.enabled)
             .Where(bar => bar.Renderer.color == workerPlace.bar.Image.color)
             .OrderBy(bar => bar.BestNeighborWayCost)
             .ThenBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)

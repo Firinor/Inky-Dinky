@@ -23,8 +23,11 @@ public class ColorBar : MonoBehaviour
             ErrorAnimation.Play();
         else
         {
-            Button.onClick.RemoveAllListeners();
-            WorkerManager.AddColorBar(this);
+            bool isAdded = WorkerManager.TryAddColorBar(this);
+            if(isAdded)
+                Button.onClick.RemoveAllListeners();
+            else
+                ErrorAnimation.Play();
         }
     }
 

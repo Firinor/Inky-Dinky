@@ -6,7 +6,8 @@ public class MainImageManager : MonoBehaviour
     public PointyPlace PointyPrefab;
     public Transform PointyPool;
     public PointyPlace[,] Places;
-    public RectTransform MainImagePosition;
+    public Transform LowerLeftCorner;
+    public Transform UperRightCorner;
     public Vector2 MainImageSize;
     public float PointyScale;
     
@@ -22,6 +23,7 @@ public class MainImageManager : MonoBehaviour
     private void LoadLevel()
     {
         MainSprite = Resources.Load<Sprite>("Levels/1");
+        //MainSprite = Resources.LoadAll<Sprite>("Levels/first")[1];
     }
     
     [ContextMenu(nameof(CreateMainImage))]
@@ -43,14 +45,8 @@ public class MainImageManager : MonoBehaviour
         int w = (int)rect.width;
         int h = (int)rect.height;
         
-        Vector3[] corners = new Vector3[4];
-        MainImagePosition.GetWorldCorners(corners);
-        Vector2 startPosition = corners[0];
-        Vector2 endPosition = corners[2];
-        float deltaX = endPosition.x - startPosition.x;
+        float deltaX = UperRightCorner.position.x - LowerLeftCorner.position.x;
         deltaX = deltaX / MainImageSize.x;
-        float deltaY = endPosition.y - startPosition.y;
-        deltaY = deltaY / MainImageSize.y;
         
         Vector2 pivot = MainSprite.pivot;
 
@@ -71,12 +67,12 @@ public class MainImageManager : MonoBehaviour
                 if (c.a < 0.5f) continue;
                 
                 float px = (x - pivot.x) * deltaX + deltaX/2;
-                float py = (y - pivot.y) * deltaY + deltaY/2;
+                float py = (y - pivot.y) * deltaX + deltaX/2;
 
                 PointyPlace pointy = Instantiate(PointyPrefab, PointyPool);
                 pointy.name = pointy.name + $"X{x}Y{y}";
                 pointy.transform.localPosition = new Vector3(px, py, 0f);
-                pointy.transform.localScale = Vector3.one * PointyScale;
+                pointy.transform.localScale = Vector3.one * deltaX;
                 pointy.Renderer.color = c;
                 pointy.Neighbors = new PointyPlace[4];
                 if (y == 0)
