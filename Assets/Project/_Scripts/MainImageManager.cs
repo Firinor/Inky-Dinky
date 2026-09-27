@@ -9,21 +9,23 @@ public class MainImageManager : MonoBehaviour
     public Transform LowerLeftCorner;
     public Transform UperRightCorner;
     public Vector2 MainImageSize;
-    public float PointyScale;
+
+    public Sprite[] Levels;
     
     public static Sprite MainSprite;
     private const int maxPointyCount = 10000;
 
-    public void Initialize()
+    public int PixelCount;
+
+    public void Initialize(SaveData player)
     {
-        LoadLevel();
+        LoadLevel(player.Level);
         CreateMainImage();
     }
     
-    private void LoadLevel()
+    private void LoadLevel(int level)
     {
-        MainSprite = Resources.Load<Sprite>("Levels/1");
-        //MainSprite = Resources.LoadAll<Sprite>("Levels/first")[1];
+        MainSprite = Levels[level];
     }
     
     [ContextMenu(nameof(CreateMainImage))]
@@ -33,6 +35,7 @@ public class MainImageManager : MonoBehaviour
             return;
         
         PointyPool.ClearAll(instant: true);
+        PixelCount = 0;
         
         Texture2D tex = MainSprite.texture;
         Rect rect = MainSprite.textureRect;
@@ -63,8 +66,8 @@ public class MainImageManager : MonoBehaviour
         {
             for (int x = 0; x < w; x++)
             {
+                PixelCount++;
                 Color c = pixels[y * w + x];
-                if (c.a < 0.5f) continue;
                 
                 float px = (x - pivot.x) * deltaX + deltaX/2;
                 float py = (y - pivot.y) * deltaX + deltaX/2;
@@ -111,6 +114,20 @@ public class MainImageManager : MonoBehaviour
                 }
                 
                 Places[x,y] = pointy;
+            }
+        }
+        for (int y = 0; y < h; y++)
+        {
+            for (int x = 0; x < w; x++)
+            {
+                var place = Places[x, y];
+                if(Mathf.Approximately(place.Renderer.color.a, 1))
+                    continue;
+                
+                PixelCount--;
+                place.Eat();
+                place.InGame = false;
+                place.CheckWayCost();
             }
         }
     }

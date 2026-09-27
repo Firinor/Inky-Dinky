@@ -6,13 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Poiny.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Poiny.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/BOOTSTRAP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/BOOTSTRAP.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/PointyPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/PointyPlace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +105,8 @@
       <workItem from="1789712383293" duration="10590000" />
       <workItem from="1789799711361" duration="15506000" />
       <workItem from="1789921070831" duration="7045000" />
-      <workItem from="1790408586728" duration="7945000" />
+      <workItem from="1790408586728" duration="9138000" />
+      <workItem from="1790495189366" duration="5344000" />
     </task>
     <servers />
   </component>

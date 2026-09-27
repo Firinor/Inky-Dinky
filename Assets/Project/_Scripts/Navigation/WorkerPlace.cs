@@ -7,7 +7,7 @@ public class WorkerPlace : MonoBehaviour
 
     public float cooldown;
     
-    private void Update()
+    public void HandleUpdate()
     {
         cooldown -= Time.deltaTime;
         if (cooldown < 0)

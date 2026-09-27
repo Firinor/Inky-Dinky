@@ -9,14 +9,15 @@ public class PointyPlace : MonoBehaviour
     public int WayCost = int.MaxValue;
     public PointyPlace[] Neighbors;
     public bool InGame = true;
-    //public TextMeshProUGUI textTemp;
+    public TextMeshProUGUI textTemp;
 
     public bool IsDeadEnd = false;
     
     public PointyPlace BestNeighbor => Neighbors
         .Where(place => place != null
             && !place.IsDeadEnd
-            && !place.InGame)
+            && !place.InGame
+            && place.WayCost < int.MaxValue)
         .OrderBy(n => n.WayCost)
         .FirstOrDefault();
 
@@ -54,7 +55,7 @@ public class PointyPlace : MonoBehaviour
         }
         
         WayCost = Math.Min(WayCost, bestNeighbor.WayCost + 1);
-        //textTemp.text = WayCost.ToString();
+        textTemp.text = WayCost.ToString();
         foreach (PointyPlace pointyPlace in Neighbors)
         {
             if(pointyPlace == null)

@@ -11,7 +11,16 @@ public class WorkerManager : MonoBehaviour
     public Transform PointyPool;
     public MainImageManager MainImage;
 
+    public GameObject WinPopup;
+    
     private List<Worker> workers;
+    private SaveData player;
+
+    public void Initialize(SaveData player)
+    {
+        this.player = player;
+        enabled = true;
+    }
 
     public bool TryAddColorBar(ColorBar bar)
     {
@@ -31,12 +40,16 @@ public class WorkerManager : MonoBehaviour
 
     private void Update()
     {
+        int loseCount = 0;
         foreach (WorkerPlace workerPlace in Places)
         {
-            if(workerPlace.bar is null)
+            if (workerPlace.bar is null)
                 continue;
-            if(workerPlace.enabled)
+            if (workerPlace.enabled)
+            {
+                workerPlace.HandleUpdate();
                 continue;
+            }
             
             PointyPlace targer = GetColorBar(workerPlace, out List<Vector3> way);
             if (targer is null)
@@ -54,14 +67,20 @@ public class WorkerManager : MonoBehaviour
             newWorker.Way = way;
             newWorker.Sprite.color = workerPlace.bar.Image.color;
             newWorker.ToStart();
+            newWorker.OnFirstPoint = () =>
+            {
+                newWorker.OnFirstPoint = null;
+                targer.InGame = false;
+                targer.CheckWayCost();
+            };
             newWorker.OnEndWay = () =>
             {
                 targer.Eat();
+                MainImage.PixelCount--;
+                CheckWin();
             };
             newWorker.gameObject.SetActive(true);
-
-            targer.InGame = false;
-            targer.CheckWayCost();
+            
             if (workerPlace.bar.Count <= 0)
             {
                 Destroy(workerPlace.bar.gameObject);
@@ -73,7 +92,17 @@ public class WorkerManager : MonoBehaviour
             }
         }
     }
-    
+
+    private void CheckWin()
+    {
+        if(MainImage.PixelCount > 0)
+            return;
+
+        player.Level++;
+        player.Save();
+        WinPopup.SetActive(true);
+    }
+
     private Worker GetWorker()
     {
         Worker newWorker = null;

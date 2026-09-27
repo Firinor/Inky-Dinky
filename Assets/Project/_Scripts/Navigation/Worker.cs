@@ -5,6 +5,7 @@ using UnityEngine;
 public class Worker : MonoBehaviour
 {
     public Action OnEndWay;
+    public Action OnFirstPoint;
     public List<Vector3> Way;
     public float speed = 1f;
     public SpriteRenderer Sprite;
@@ -27,6 +28,7 @@ public class Worker : MonoBehaviour
         if(Vector3.Distance(transform.position, Way[wayIndex]) < 0.01f)
         {
             wayIndex++;
+            OnFirstPoint?.Invoke();
             if (wayIndex >= Way.Count)
             {
                 gameObject.SetActive(false);

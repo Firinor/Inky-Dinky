@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ColorJarsManager : MonoBehaviour
 {
-    public int MinJarCount;
     public Vector2Int JarNumberMinMax;
     public RectTransform[] Collumns;
     public ColorBar BarPrefab;
@@ -43,6 +42,9 @@ public class ColorJarsManager : MonoBehaviour
         
         foreach (var i in counts)
         {
+            if(i.Key.a < 1)
+                continue;
+            
             //Debug.Log(i.Key + " " + i.Value);
             if (i.Value > JarNumberMinMax.y)
             {
