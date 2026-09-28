@@ -6,6 +6,7 @@ public class WorkerPlace : MonoBehaviour
     public ColorBar bar;
 
     public float cooldown;
+    public bool isWarning;
     
     public void HandleUpdate()
     {

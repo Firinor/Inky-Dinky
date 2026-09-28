@@ -55,7 +55,8 @@ public class PointyPlace : MonoBehaviour
         }
         
         WayCost = Math.Min(WayCost, bestNeighbor.WayCost + 1);
-        textTemp.text = WayCost.ToString();
+        if(textTemp != null)
+            textTemp.text = WayCost.ToString();
         foreach (PointyPlace pointyPlace in Neighbors)
         {
             if(pointyPlace == null)

@@ -12,14 +12,20 @@ public class WorkerManager : MonoBehaviour
     public MainImageManager MainImage;
 
     public GameObject WinPopup;
+    public GameObject LosePopup;
     
     private List<Worker> workers;
     private SaveData player;
+
+    private int workerCount = 0;
+    private float timerTime = 2f;
+    private float loseTimerTime;
 
     public void Initialize(SaveData player)
     {
         this.player = player;
         enabled = true;
+        loseTimerTime = timerTime;
     }
 
     public bool TryAddColorBar(ColorBar bar)
@@ -27,6 +33,8 @@ public class WorkerManager : MonoBehaviour
         foreach (var workerPlace in Places)
         {
             if(workerPlace.bar is not null)
+                continue;
+            if(workerPlace.transform.childCount > 0)
                 continue;
 
             workerPlace.bar = bar;
@@ -40,7 +48,6 @@ public class WorkerManager : MonoBehaviour
 
     private void Update()
     {
-        int loseCount = 0;
         foreach (WorkerPlace workerPlace in Places)
         {
             if (workerPlace.bar is null)
@@ -54,15 +61,19 @@ public class WorkerManager : MonoBehaviour
             PointyPlace targer = GetColorBar(workerPlace, out List<Vector3> way);
             if (targer is null)
             {
+                workerPlace.isWarning = true;
                 workerPlace.enabled = true;
                 workerPlace.AddCooldown(1f);
                 continue;
             }
 
+            loseTimerTime = timerTime;
+            workerPlace.isWarning = false;
             workerPlace.bar.Count--;
             workerPlace.bar.Text.text = workerPlace.bar.Count.ToString();
             
             Worker newWorker = GetWorker();
+            workerCount++;
             newWorker.transform.position = workerPlace.transform.position;
             newWorker.Way = way;
             newWorker.Sprite.color = workerPlace.bar.Image.color;
@@ -70,15 +81,16 @@ public class WorkerManager : MonoBehaviour
             newWorker.OnFirstPoint = () =>
             {
                 newWorker.OnFirstPoint = null;
-                targer.InGame = false;
                 targer.CheckWayCost();
             };
             newWorker.OnEndWay = () =>
             {
+                workerCount--;
                 targer.Eat();
                 MainImage.PixelCount--;
                 CheckWin();
             };
+            targer.InGame = false;
             newWorker.gameObject.SetActive(true);
             
             if (workerPlace.bar.Count <= 0)
@@ -91,8 +103,29 @@ public class WorkerManager : MonoBehaviour
                 workerPlace.enabled = true;
             }
         }
+        
+        if(workerCount > 0)
+            return;
+
+        CheckLose();
     }
 
+    private void CheckLose()
+    {
+        if(MainImage.PixelCount <= 0)
+            return;
+        foreach (WorkerPlace workerPlace in Places)
+        {
+            if(!workerPlace.isWarning
+               && workerPlace.transform.childCount == 0)
+                return;
+        }
+
+        loseTimerTime -= Time.deltaTime;
+        if(loseTimerTime <= 0)
+            LosePopup.SetActive(true);
+    }
+    
     private void CheckWin()
     {
         if(MainImage.PixelCount > 0)

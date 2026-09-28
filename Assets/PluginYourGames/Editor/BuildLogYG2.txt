@@ -1,0 +1,3 @@
+﻿Build path: E:/UNITY projects/FirGames/Inky-Dinky/Builds/ProtoYG
+Build number: 0
+PluginYG version: 2.0092
