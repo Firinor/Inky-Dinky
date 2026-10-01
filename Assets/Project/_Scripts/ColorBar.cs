@@ -10,9 +10,11 @@ public class ColorBar : MonoBehaviour
     public TextMeshProUGUI Text;
     public Button Button;
     public FirRotationAnimation ErrorAnimation;
+    public FirPositionAnimation PositionAnimation;
+    public FirZoomAnimation ZoomAnimation;
     public static WorkerManager WorkerManager;
     
-    private void Start()
+    public void Instantiate()
     {
         Button.onClick.AddListener(TryWork);
     }

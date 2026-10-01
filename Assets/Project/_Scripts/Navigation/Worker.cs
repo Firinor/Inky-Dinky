@@ -15,6 +15,8 @@ public class Worker : MonoBehaviour
     public void ToStart()
     {
         wayIndex = 0;
+        float angle = Vector2.Angle(transform.position, Way[wayIndex]);
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
     
     public void Update()
@@ -33,6 +35,11 @@ public class Worker : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 OnEndWay?.Invoke();
+            }
+            else
+            {
+                float angle = Vector2.Angle(transform.position, Way[wayIndex]);
+                transform.rotation = Quaternion.Euler(0, 0, angle);
             }
         }
     }

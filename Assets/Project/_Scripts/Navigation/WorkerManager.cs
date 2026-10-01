@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FirAnimations;
 using UnityEngine;
 
 public class WorkerManager : MonoBehaviour
@@ -9,7 +10,9 @@ public class WorkerManager : MonoBehaviour
     public Worker WorkerPerfab;
     public Transform WorkerPool;
     public Transform PointyPool;
+    public Transform ColorBarsFlyParent;
     public MainImageManager MainImage;
+    public Transform zoomPlug;
 
     public GameObject WinPopup;
     public GameObject LosePopup;
@@ -36,10 +39,31 @@ public class WorkerManager : MonoBehaviour
                 continue;
             if(workerPlace.transform.childCount > 0)
                 continue;
-
             workerPlace.bar = bar;
+            workerPlace.AddCooldown(bar.PositionAnimation.Curve.keys[^1].time);
+            RectTransform rectTransform = bar.GetComponent<RectTransform>();
+            Transform transformPlug = bar.transform.parent;
+            rectTransform.SetParent(ColorBarsFlyParent, worldPositionStays: true);
+            bar.PositionAnimation.StartPosition = rectTransform.anchoredPosition3D;
+            FirSizeAnimation sizeClone = Instantiate(zoomPlug, transformPlug).GetComponent<FirSizeAnimation>();
+            sizeClone.transform.SetAsFirstSibling();
+            sizeClone.OnComplete = () =>
+                { Destroy(sizeClone.gameObject); };
+            sizeClone.Play();
+            rectTransform.anchorMin = new Vector2(.5f, .5f);
+            rectTransform.anchorMax = new Vector2(.5f, .5f);
+            rectTransform.localPosition = Vector3.zero;
             bar.transform.SetParent(workerPlace.transform);
-            bar.transform.localPosition = Vector3.zero;
+            bar.PositionAnimation.EndPosition = -rectTransform.anchoredPosition3D;
+            rectTransform.SetParent(ColorBarsFlyParent);
+            //bar.transform.localPosition = Vector3.zero;
+            bar.PositionAnimation.OnComplete = () =>
+            {
+                bar.transform.SetParent(workerPlace.transform, worldPositionStays: true);
+                bar.enabled = true;
+            };
+            bar.PositionAnimation.Play();
+            bar.ZoomAnimation.Play();
             return true;
         }
         

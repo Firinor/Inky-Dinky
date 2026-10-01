@@ -59,6 +59,7 @@ public class ColorJarsManager : MonoBehaviour
                     newColorBar.Image.color = i.Key;
                     newColorBar.Text.text = colorValue.ToString();
                     newColorBar.Count = colorValue;
+                    newColorBar.Instantiate();
                     colorBars.Add(newColorBar);
                 }
             }
@@ -68,6 +69,7 @@ public class ColorJarsManager : MonoBehaviour
                 newColorBar.Image.color = i.Key;
                 newColorBar.Text.text = i.Value.ToString();
                 newColorBar.Count = i.Value;
+                newColorBar.Instantiate();
                 colorBars.Add(newColorBar);
             }
         }
