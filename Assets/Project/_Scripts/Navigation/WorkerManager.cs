@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
+using TMPro;
 using UnityEngine;
 
 public class WorkerManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class WorkerManager : MonoBehaviour
     public Transform ColorBarsFlyParent;
     public MainImageManager MainImage;
     public Transform zoomPlug;
+    public TextMeshProUGUI pointsText;
 
     public GameObject WinPopup;
     public GameObject LosePopup;
@@ -23,7 +25,7 @@ public class WorkerManager : MonoBehaviour
     private int workerCount = 0;
     private float timerTime = 2f;
     private float loseTimerTime;
-
+    
     public void Initialize(SaveData player)
     {
         this.player = player;
@@ -81,13 +83,15 @@ public class WorkerManager : MonoBehaviour
                 workerPlace.HandleUpdate();
                 continue;
             }
+            if (workerPlace.bar.Count <= 0)
+                continue;
             
             PointyPlace targer = GetColorBar(workerPlace, out List<Vector3> way);
             if (targer is null)
             {
                 workerPlace.isWarning = true;
-                workerPlace.enabled = true;
-                workerPlace.AddCooldown(1f);
+                //workerPlace.enabled = true;
+                //workerPlace.AddCooldown(1f);
                 continue;
             }
 
@@ -110,8 +114,9 @@ public class WorkerManager : MonoBehaviour
             newWorker.OnEndWay = () =>
             {
                 workerCount--;
-                targer.Eat();
                 MainImage.PixelCount--;
+                targer.Eat();
+                FlyLootManager.instance.AnimateGoods(targer.Renderer, targer.transform, pointsText.transform);
                 CheckWin();
             };
             targer.InGame = false;
@@ -119,8 +124,21 @@ public class WorkerManager : MonoBehaviour
             
             if (workerPlace.bar.Count <= 0)
             {
-                Destroy(workerPlace.bar.gameObject);
-                workerPlace.bar = null;
+                AnimationCurve curveZoom = new AnimationCurve(
+                    new Keyframe(0f, 0f, 0f, 0f),
+                    new Keyframe(.4f, 1f, 2f, 2f)
+                );
+                
+                var animationZoom = workerPlace.bar.gameObject.AddComponent<FirZoomAnimation>();
+                animationZoom.StartZoom = Vector3.one;
+                animationZoom.EndZoom = Vector3.zero;
+                animationZoom.OnComplete += () =>
+                {
+                    Destroy(workerPlace.bar.gameObject);
+                    workerPlace.bar = null;
+                };
+                animationZoom.Curve = curveZoom;
+                animationZoom.Play();
             }
             else
             {

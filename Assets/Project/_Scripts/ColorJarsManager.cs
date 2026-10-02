@@ -45,7 +45,6 @@ public class ColorJarsManager : MonoBehaviour
             if(i.Key.a < 1)
                 continue;
             
-            //Debug.Log(i.Key + " " + i.Value);
             if (i.Value > JarNumberMinMax.y)
             {
                 int j = 0;

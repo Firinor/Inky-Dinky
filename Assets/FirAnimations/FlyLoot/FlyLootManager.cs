@@ -33,14 +33,14 @@ public class FlyLootManager : MonoBehaviour
         instance = this;
     }
 
-    public void AnimateGoods(Sprite goods, Transform startPoint, Transform endPoint, int count = 1)
+    public void AnimateGoods(SpriteRenderer goods, Transform startPoint, Transform endPoint, int count = 1)
     {
         StartCoroutine(AnimateGoodsCoroutine(goods, startPoint, endPoint, count));
     }
 
-    private IEnumerator AnimateGoodsCoroutine(Sprite goods, Transform startPoint, Transform endPoint, int count = 1)
+    private IEnumerator AnimateGoodsCoroutine(SpriteRenderer goods, Transform startPoint, Transform endPoint, int count = 1)
     {
-        bool isOffset = count > 1;
+       // bool isOffset = count > 1;
         
         float timer = 0;
         float yieldDelay = spawnTotalTime/count;
@@ -58,13 +58,10 @@ public class FlyLootManager : MonoBehaviour
             
             FlyLoot newGoods = Instantiate(prefab, startPoint.position , Quaternion.identity, parent);
             lootPool.Add(newGoods);
-            if (isOffset)
-            {
-                newGoods.SetDestination(goods, endPoint, randomOffset);
-            }
-            else
-                newGoods.SetDestination(goods, endPoint);
-
+            //if (isOffset)
+            newGoods.SetDestination(goods.sprite, goods.color, endPoint, randomOffset);
+            //else
+            //    newGoods.SetDestination(goods.sprite, goods.color, endPoint);
             newGoods.OnPointerEnterAction += FlyToEnd;
         }
     }
@@ -76,11 +73,5 @@ public class FlyLootManager : MonoBehaviour
             loot.FlyToEnd();
             loot.OnPointerEnterAction -= FlyToEnd;
         }
-    }
-    
-    [ContextMenu(nameof(Test))]
-    private void Test()
-    {
-        StartCoroutine(AnimateGoodsCoroutine(testSprite, testStartpoint, testEndpoint, testCount));
     }
 }

@@ -32,7 +32,7 @@ public class PointyPlace : MonoBehaviour
         }
     }
 
-    public bool IsOpen => Neighbors.Any(n => n == null || (!n.Renderer.enabled && n.WayCost < int.MaxValue));
+    public bool IsOpen => Neighbors.Any(n => n == null || n.WayCost < int.MaxValue);
 
     public void Eat()
     {

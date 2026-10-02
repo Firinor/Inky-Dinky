@@ -25,9 +25,10 @@ public class FlyLoot : MonoBehaviour, IPointerEnterHandler
     public Action OnPointerEnterAction;
     private bool secondStep;
     
-    public void SetDestination(Sprite goods, Transform endPoint, Vector2 offset = default)
+    public void SetDestination(Sprite goods, Color color, Transform endPoint, Vector2 offset = default)
     {
         image.sprite = goods;
+        image.color = color;
         this.offset = offset;
         startPosition = transform.position;
         transform.position = endPoint.position;
