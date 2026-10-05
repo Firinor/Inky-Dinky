@@ -14,7 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
   m_TableCollectionName: MainTable
   m_TableCollectionNameGuidString: 5b2ef4c242d5989479387ecc0cfa7fdf
-  m_Entries: []
+  m_Entries:
+  - m_Id: 2815833583312896
+    m_Key: Sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2815945042747392
+    m_Key: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2816013460234240
+    m_Key: Lang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2816091977605120
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

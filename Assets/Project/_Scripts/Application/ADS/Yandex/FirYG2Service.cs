@@ -23,7 +23,7 @@ public class FirYG2Service : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
         
-        YG2.onPurchaseSuccess += SuccessPurchased;
+        //YG2.onPurchaseSuccess += SuccessPurchased;
         YG2.onAdvNotification += PauseGame;
         YG2.onCloseAnyAdv  += UnpauseGame;
     }
@@ -119,7 +119,7 @@ public class FirYG2Service : MonoBehaviour
 
     private void OnDestroy()
     {
-        YG2.onPurchaseSuccess -= SuccessPurchased;
+        //YG2.onPurchaseSuccess -= SuccessPurchased;
         YG2.onAdvNotification -= PauseGame;
         YG2.onCloseAnyAdv  -= UnpauseGame;
     }

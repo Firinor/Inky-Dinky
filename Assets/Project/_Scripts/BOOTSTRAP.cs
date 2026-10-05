@@ -1,14 +1,18 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+#if IS_YANDEX
+using YG;
+#endif
 
 public class BOOTSTRAP : MonoBehaviour
 {
-    public MainImageManager MainImageManager;
-    public ColorJarsManager ColorJarsManager;
-    public WorkerManager WorkerManager;
-
-    private SaveData player;
+    [SerializeField]
+    private SceneButton nextScene;
+    [SerializeField]
+    private Settings settings;
+    [SerializeField] 
+    private AudioSource music;
     
     IEnumerator Start()
     {
@@ -17,17 +21,9 @@ public class BOOTSTRAP : MonoBehaviour
         yield return YG2.onGetSDKData;
 #endif
         
-        LoadPlayerData();
-        //settings.Initialize(bootstrap: true);
-        
-        MainImageManager.Initialize(player);
-        ColorJarsManager.Initialize();
-        WorkerManager.Initialize(player);
-    }
-    
-    private void LoadPlayerData()
-    {
-        player = SaveData.GetPlayer();
-        player.FirstLoad();
+        settings.Initialize(bootstrap: true);
+        if(music != null)
+            music.Play();
+        nextScene.SwitchToScene();
     }
 }

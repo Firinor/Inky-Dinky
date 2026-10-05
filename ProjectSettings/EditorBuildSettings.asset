@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/BOOTSTRAP.unity
+    guid: 4408b3621fc58834e87dc742dd633e73
+  - enabled: 1
+    path: Assets/Scenes/WorldMapScene.unity
+    guid: bacc8542ab74e3145a3d02dfdefdafc2
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:

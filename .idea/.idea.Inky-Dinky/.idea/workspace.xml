@@ -5,17 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MetaBOOTSTRAP.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MetaBOOTSTRAP.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/MainTable Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/MainTable Shared Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/MainTable_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/MainTable_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/MainTable_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/MainTable_ru.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainAudioMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainAudioMixer.mixer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/PointyPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/PointyPlace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Settings.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Settings.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/BOOTSTRAP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/BOOTSTRAP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/BOOTSTRAP.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/BOOTSTRAP.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldMapScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WorldMapScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +121,8 @@
       <workItem from="1790778968117" duration="1419000" />
       <workItem from="1790831547322" duration="18312000" />
       <workItem from="1790934436874" duration="8768000" />
+      <workItem from="1791121548050" duration="5903000" />
+      <workItem from="1791191635450" duration="2572000" />
     </task>
     <servers />
   </component>
