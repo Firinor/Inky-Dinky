@@ -5,6 +5,8 @@ namespace YG
     public partial class SavesYG
     {
         public int Level;
+        public int MaxLevel;
+        public int Biom;
     }
 }
 
@@ -16,6 +18,16 @@ public class YGSaveData : SaveData
     {
         get => saves.Level;
         set => saves.Level = value;
+    }
+    public override int MaxLevel
+    {
+        get => saves.MaxLevel;
+        set => saves.MaxLevel = value;
+    }
+    public override int Biom
+    {
+        get => saves.Biom;
+        set => saves.Biom = value;
     }
     
     public override void FirstLoad()
@@ -31,6 +43,8 @@ public class YGSaveData : SaveData
     public override void ResetProgress()
     {
         Level = 0;
+        Biom = 0;
+        MaxLevel = 0;
         Save();
     }
 }

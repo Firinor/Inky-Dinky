@@ -30,6 +30,10 @@ MonoBehaviour:
     m_Localized: LANG
     m_Metadata:
       m_Items: []
+  - m_Id: 2816091977605120
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

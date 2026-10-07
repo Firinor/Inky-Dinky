@@ -1,0 +1,14 @@
+{
+    "intExample": 5,
+    "strExample": "Hello!",
+    "boolExample": [
+        false,
+        false,
+        false,
+        false
+    ],
+    "idSave": 78,
+    "Level": 0,
+    "MaxLevel": 63,
+    "Biom": 2
+}
