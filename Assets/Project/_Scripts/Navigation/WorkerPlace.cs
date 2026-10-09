@@ -4,9 +4,10 @@ public class WorkerPlace : MonoBehaviour
 {
     public float Cooldown = 1f;
     public ColorBar bar;
+    public PointyPlace NearestPlace;
 
     public float cooldown;
-    public bool isWarning;
+    public int isWarningNumber = int.MaxValue;
     
     public void HandleUpdate()
     {

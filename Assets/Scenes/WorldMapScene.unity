@@ -2923,6 +2923,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6520875254545734969, guid: a37742b9e3a69a140bfc9cf8aa52af14, type: 3}
+      propertyPath: closeCurtain
+      value: 
+      objectReference: {fileID: 468092115}
+    - target: {fileID: 6520875254545734969, guid: a37742b9e3a69a140bfc9cf8aa52af14, type: 3}
       propertyPath: "close\u0421urtain"
       value: 
       objectReference: {fileID: 468092115}

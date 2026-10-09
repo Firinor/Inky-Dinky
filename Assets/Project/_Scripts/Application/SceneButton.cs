@@ -6,17 +6,17 @@ public class SceneButton : MonoBehaviour
 {
     public string SceneName;
 
-    public FirAnimation closeСurtain;    
+    public FirAnimation closeCurtain;    
     
     public void SwitchToScene()
     {
-        if(closeСurtain == null)
+        if(closeCurtain == null)
             SceneManager.LoadScene(SceneName);
         else
         {
-            closeСurtain.OnComplete = null;
-            closeСurtain.OnComplete = () => { SceneManager.LoadScene(SceneName);};
-            closeСurtain.Play();
+            closeCurtain.OnComplete = null;
+            closeCurtain.OnComplete = () => { SceneManager.LoadScene(SceneName);};
+            closeCurtain.Play();
         }
     }
 }

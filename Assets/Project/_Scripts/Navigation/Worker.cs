@@ -12,6 +12,7 @@ public class Worker : MonoBehaviour
     public float eatTime = .6f;
     public SpriteRenderer Sprite;
     public float flipTime = .2f;
+    public float distansToPoint = 1f;
 
     private bool isEndCoroutine;
     private float flipTimer;
@@ -48,7 +49,7 @@ public class Worker : MonoBehaviour
             speed * Time.deltaTime
         );
         
-        if(Vector3.Distance(transform.position, Way[wayIndex]) < 0.1f)
+        if(Vector3.Distance(transform.position, Way[wayIndex]) < distansToPoint)
         {
             wayIndex++;
             OnFirstPoint?.Invoke();

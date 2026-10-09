@@ -79,7 +79,10 @@ public class MainImageManager : MonoBehaviour
                 pointy.Renderer.color = c;
                 pointy.Neighbors = new PointyPlace[4];
                 if (y == 0)
+                {
+                    
                     pointy.WayCost = 0;
+                }
 
                 created++;
                 if (created >= maxPointyCount) 

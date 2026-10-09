@@ -31,6 +31,13 @@ public class WorkerManager : MonoBehaviour
         this.player = player;
         enabled = true;
         loseTimerTime = timerTime;
+        foreach (WorkerPlace workerPlace in Places)
+        {
+            workerPlace.NearestPlace = MainImage.Places
+                .Cast<PointyPlace>()
+                .OrderBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)
+                .FirstOrDefault();
+        }
     }
 
     public bool TryAddColorBar(ColorBar bar)
@@ -85,18 +92,19 @@ public class WorkerManager : MonoBehaviour
             }
             if (workerPlace.bar.Count <= 0)
                 continue;
+            if (workerPlace.isWarningNumber == MainImage.PixelCount)
+                continue;
             
             PointyPlace targer = GetColorBar(workerPlace, out List<Vector3> way);
             if (targer is null)
             {
-                workerPlace.isWarning = true;
+                workerPlace.isWarningNumber = MainImage.PixelCount;
                 //workerPlace.enabled = true;
                 //workerPlace.AddCooldown(1f);
                 continue;
             }
 
             loseTimerTime = timerTime;
-            workerPlace.isWarning = false;
             workerPlace.bar.Count--;
             workerPlace.bar.Text.text = workerPlace.bar.Count.ToString();
             
@@ -158,7 +166,7 @@ public class WorkerManager : MonoBehaviour
             return;
         foreach (WorkerPlace workerPlace in Places)
         {
-            if(!workerPlace.isWarning
+            if(workerPlace.isWarningNumber != MainImage.PixelCount
                && workerPlace.transform.childCount == 0)
                 return;
         }
@@ -193,14 +201,61 @@ public class WorkerManager : MonoBehaviour
     }
     private PointyPlace GetColorBar(WorkerPlace workerPlace, out List<Vector3> way)
     {
-        PointyPlace result = null;
         way = new();
+
+        var queue = new Queue<PointyPlace>();
+        var cameFrom = new Dictionary<PointyPlace, PointyPlace>();
+        var originOf = new Dictionary<PointyPlace, PointyPlace>();
         
-        result = MainImage.Places
+        var sorted = Enumerable.Range(0, MainImage.Places.GetLength(0))
+            .Select(x => MainImage.Places[x, 0])
+            .OrderBy(p => (p.transform.position - workerPlace.transform.position).sqrMagnitude)
+            .ToArray();
+        
+        foreach (var start in sorted)
+        {
+            Debug.Log(start.transform.position, start);
+            if (start == null) continue;
+            if (cameFrom.ContainsKey(start)) continue;
+
+            cameFrom[start] = null;
+            originOf[start] = start;
+            queue.Enqueue(start);
+        }
+        
+        while (queue.Count > 0)
+        {
+            var current = queue.Dequeue();
+            var origin = originOf[current];
+            
+            if (current != origin
+                && current.Renderer.color == origin.Renderer.color
+                && current.IsOpen
+                && current.InGame)
+            {
+                way = ReconstructPath(cameFrom, current);
+                return current;
+            }
+
+            foreach (var neighbor in current.Neighbors)
+            {
+                if (neighbor == null) continue;
+                if (cameFrom.ContainsKey(neighbor)) continue;
+                if (!neighbor.IsOpen) continue;
+                if (!neighbor.InGame) continue;
+
+                cameFrom[neighbor] = current;
+                originOf[neighbor] = origin;
+                queue.Enqueue(neighbor);
+            }
+        }
+
+        return null;
+        
+        /*result = MainImage.Places
             .Cast<PointyPlace>()
             .Where(bar => bar.IsOpen)
             .Where(bar => bar.InGame)
-            //.Where(bar => bar.Renderer.enabled)
             .Where(bar => bar.Renderer.color == workerPlace.bar.Image.color)
             .OrderBy(bar => bar.BestNeighborWayCost)
             .ThenBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)
@@ -211,10 +266,23 @@ public class WorkerManager : MonoBehaviour
         
         way = GetWay(result);
         
-        return result;
+        return result;*/
     }
 
-    private List<Vector3> GetWay(PointyPlace startPoint)
+    private static List<Vector3> ReconstructPath(Dictionary<PointyPlace, PointyPlace> cameFrom, PointyPlace target)
+    {
+        var path = new List<Vector3>();
+        PointyPlace current = target;
+        while (current != null)
+        {
+            path.Add(current.transform.position);
+            current = cameFrom[current];
+        }
+        path.Reverse();
+        return path;
+    }
+    
+    /*private List<Vector3> GetWay(PointyPlace startPoint)
     {
         List<PointyPlace> result = new List<PointyPlace> { startPoint };
 
@@ -246,5 +314,5 @@ public class WorkerManager : MonoBehaviour
         }
         
         return resultVector;
-    }
+    }*/
 }
