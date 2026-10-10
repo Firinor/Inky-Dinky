@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class WorkerPlace : MonoBehaviour
 {
     public float Cooldown = 1f;
     public ColorBar bar;
-    public PointyPlace NearestPlace;
+    public Dictionary<PointyPlace, float> NearestPlaces;
 
     public float cooldown;
     public int isWarningNumber = int.MaxValue;

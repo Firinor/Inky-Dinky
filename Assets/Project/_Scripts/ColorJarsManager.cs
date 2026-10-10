@@ -11,7 +11,6 @@ public class ColorJarsManager : MonoBehaviour
     
     public void Initialize()
     {
-        //GetImage();
         GenerateColorSequence();
     }
 
@@ -35,11 +34,19 @@ public class ColorJarsManager : MonoBehaviour
         );
 
         List<ColorBar> colorBars = new List<ColorBar>();
+        List<ColorBar> startColorBars = new List<ColorBar>();
         
         Dictionary<Color, int> counts = pixels
             .GroupBy(c => c)
             .ToDictionary(g => g.Key, g => g.Count());
-        
+        Color[] startPixels = tex.GetPixels(
+            (int)rect.x, (int)rect.y,
+            (int)rect.width, Collumns.Length
+        );
+        Dictionary<Color, int> startColors = startPixels
+            .GroupBy(c => c)
+            .ToDictionary(g => g.Key, g => g.Count());
+            
         foreach (var i in counts)
         {
             if(i.Key.a < 1)
@@ -72,10 +79,32 @@ public class ColorJarsManager : MonoBehaviour
                 colorBars.Add(newColorBar);
             }
         }
+
+        foreach (var kvp in startColors)
+        {
+            if(kvp.Key.a < 1)
+                continue;
+            
+            int count = kvp.Value;
+            while (count > 0)
+            {
+                ColorBar candidat = colorBars.Find(b => b.Image.color == kvp.Key);
+                count -= candidat.Count;
+                colorBars.Remove(candidat);
+                startColorBars.Add(candidat);
+            }
+        }
         
+        startColorBars.Shuffle();
         colorBars.Shuffle();
 
         int columnIndex = 0;
+        foreach (var colorBar in startColorBars)
+        {
+            colorBar.transform.SetParent(Collumns[columnIndex]);
+            columnIndex++;
+            columnIndex %= Collumns.Length;
+        }
         foreach (var colorBar in colorBars)
         {
             colorBar.transform.SetParent(Collumns[columnIndex]);

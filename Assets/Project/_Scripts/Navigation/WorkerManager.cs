@@ -4,6 +4,7 @@ using System.Linq;
 using FirAnimations;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class WorkerManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class WorkerManager : MonoBehaviour
     public MainImageManager MainImage;
     public Transform zoomPlug;
     public TextMeshProUGUI pointsText;
+    public float deltaColor = 0.1f;
 
     public GameObject WinPopup;
     public GameObject LosePopup;
@@ -33,10 +35,14 @@ public class WorkerManager : MonoBehaviour
         loseTimerTime = timerTime;
         foreach (WorkerPlace workerPlace in Places)
         {
-            workerPlace.NearestPlace = MainImage.Places
-                .Cast<PointyPlace>()
-                .OrderBy(bar => (bar.transform.position - workerPlace.transform.position).sqrMagnitude)
-                .FirstOrDefault();
+            Vector2 point1 = workerPlace.transform.position;
+            workerPlace.NearestPlaces = Enumerable.Range(0, MainImage.Places.GetLength(0))
+                .Select(x => MainImage.Places[x, 0])
+                .OrderBy(place => (place.transform.position - workerPlace.transform.position).sqrMagnitude)
+                .ToDictionary(
+                    place => place, 
+                    place => Vector2.Distance(place.transform.position, point1) / MainImage.deltaX
+                    );
         }
     }
 
@@ -201,26 +207,47 @@ public class WorkerManager : MonoBehaviour
     }
     private PointyPlace GetColorBar(WorkerPlace workerPlace, out List<Vector3> way)
     {
+        Color targetColor = workerPlace.bar.Image.color;
         way = new();
+        
+        PointyPlace result = MainImage.Places
+            .Cast<PointyPlace>()
+            .Where(bar => bar.IsOpen)
+            .Where(bar => bar.InGame)
+            .Where(bar => bar.Renderer.color == targetColor)
+            .OrderBy(bar =>
+            {
+                List<PointyPlace> points = GetWayPointyPlace(bar);
+                return points.Count + workerPlace.NearestPlaces[points[0]];
+            })
+            .FirstOrDefault();
+        
+        if (result is null)
+            return result;
+        
+        way = getWayVector3(result);
+        
+        return result;
+        
+        /*var checkedPoints = new List<PointyPlace>(candidats);
+        var checkedPoints = new List<PointyPlace>(candidats);
 
-        var queue = new Queue<PointyPlace>();
-        var cameFrom = new Dictionary<PointyPlace, PointyPlace>();
-        var originOf = new Dictionary<PointyPlace, PointyPlace>();
-        
-        var sorted = Enumerable.Range(0, MainImage.Places.GetLength(0))
-            .Select(x => MainImage.Places[x, 0])
-            .OrderBy(p => (p.transform.position - workerPlace.transform.position).sqrMagnitude)
-            .ToArray();
-        
-        foreach (var start in sorted)
+        while (candidats.Count > 0)
         {
-            Debug.Log(start.transform.position, start);
-            if (start == null) continue;
-            if (cameFrom.ContainsKey(start)) continue;
-
-            cameFrom[start] = null;
-            originOf[start] = start;
-            queue.Enqueue(start);
+            foreach (var candidat in candidats)
+            {
+                if (candidat.Renderer.color == targetColor
+                    && candidat.IsOpen
+                    && candidat.InGame)
+                {
+                    candidats.Add(start);
+                    continue;
+                }
+                
+                cameFrom[start] = null;
+                originOf[start] = start;
+                queue.Enqueue(start);
+            }
         }
         
         while (queue.Count > 0)
@@ -228,12 +255,15 @@ public class WorkerManager : MonoBehaviour
             var current = queue.Dequeue();
             var origin = originOf[current];
             
-            if (current != origin
-                && current.Renderer.color == origin.Renderer.color
+            if (current.Renderer.color == targetColor
                 && current.IsOpen
                 && current.InGame)
             {
-                way = ReconstructPath(cameFrom, current);
+                if (current == origin)
+                    way = new List<Vector3>{current.transform.position};
+                else
+                    way = ReconstructPath(cameFrom, current);
+                
                 return current;
             }
 
@@ -248,9 +278,7 @@ public class WorkerManager : MonoBehaviour
                 originOf[neighbor] = origin;
                 queue.Enqueue(neighbor);
             }
-        }
-
-        return null;
+        }*/
         
         /*result = MainImage.Places
             .Cast<PointyPlace>()
@@ -268,37 +296,22 @@ public class WorkerManager : MonoBehaviour
         
         return result;*/
     }
-
-    private static List<Vector3> ReconstructPath(Dictionary<PointyPlace, PointyPlace> cameFrom, PointyPlace target)
-    {
-        var path = new List<Vector3>();
-        PointyPlace current = target;
-        while (current != null)
-        {
-            path.Add(current.transform.position);
-            current = cameFrom[current];
-        }
-        path.Reverse();
-        return path;
-    }
-    
-    /*private List<Vector3> GetWay(PointyPlace startPoint)
+    private List<Vector3> getWayVector3(PointyPlace startPoint)
     {
         List<PointyPlace> result = new List<PointyPlace> { startPoint };
 
         PointyPlace currentPoint = startPoint;
-        while (currentPoint.WayCost > 0)
+        while (true)
         {
+            if(currentPoint.Neighbors.Any(neighbor => neighbor == null))
+                break;
+            
             var bestNeighbor = currentPoint.Neighbors
-                .Where(place => place != null
-                                && !place.IsDeadEnd
+                .Where(place => !place.IsDeadEnd
                                 && !result.Contains(place))
                 .OrderBy(n => n.WayCost)
                 .ThenBy(bar => bar.transform.position.y)
                 .FirstOrDefault();
-
-            if (bestNeighbor == null)
-                throw new Exception();
             
             currentPoint = bestNeighbor;
             result.Add(currentPoint);
@@ -314,5 +327,39 @@ public class WorkerManager : MonoBehaviour
         }
         
         return resultVector;
-    }*/
+    }
+    
+    private List<PointyPlace> GetWayPointyPlace(PointyPlace startPoint)
+    {
+        List<PointyPlace> result = new List<PointyPlace> { startPoint };
+
+        PointyPlace currentPoint = startPoint;
+        while (currentPoint != null)
+        {
+            if(currentPoint.Neighbors.Any(neighbor => neighbor == null))
+                break;
+            
+            var bestNeighbor = currentPoint.Neighbors
+                .Where(place => !place.IsDeadEnd
+                                && !result.Contains(place)
+                                && place.WayCost < int.MaxValue)
+                .OrderBy(n => n.WayCost)
+                .ThenBy(bar => bar.transform.position.y)
+                .FirstOrDefault();
+            
+            currentPoint = bestNeighbor;
+            result.Add(currentPoint);
+        }
+        result.Reverse();
+        return result;
+    }
+    public static Color GetSimilarColorRGB(Color baseColor, float maxDelta = 0.1f)
+    {
+        return new Color(
+            Mathf.Clamp01(baseColor.r + Random.Range(-maxDelta, maxDelta)),
+            Mathf.Clamp01(baseColor.g + Random.Range(-maxDelta, maxDelta)),
+            Mathf.Clamp01(baseColor.b + Random.Range(-maxDelta, maxDelta)),
+            baseColor.a
+        );
+    }
 }

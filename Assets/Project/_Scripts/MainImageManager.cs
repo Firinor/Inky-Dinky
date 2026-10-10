@@ -9,6 +9,7 @@ public class MainImageManager : MonoBehaviour
     public Transform LowerLeftCorner;
     public Transform UperRightCorner;
     public Vector2 MainImageSize;
+    public float deltaX;
 
     public Sprite[] Levels;
     
@@ -48,7 +49,7 @@ public class MainImageManager : MonoBehaviour
         int w = (int)rect.width;
         int h = (int)rect.height;
         
-        float deltaX = UperRightCorner.position.x - LowerLeftCorner.position.x;
+        deltaX = UperRightCorner.position.x - LowerLeftCorner.position.x;
         deltaX = deltaX / MainImageSize.x;
         
         Vector2 pivot = MainSprite.pivot;
@@ -78,11 +79,10 @@ public class MainImageManager : MonoBehaviour
                 pointy.transform.localScale = Vector3.one * deltaX;
                 pointy.Renderer.color = c;
                 pointy.Neighbors = new PointyPlace[4];
-                if (y == 0)
+                /*if (y == 0)
                 {
-                    
                     pointy.WayCost = 0;
-                }
+                }*/
 
                 created++;
                 if (created >= maxPointyCount) 

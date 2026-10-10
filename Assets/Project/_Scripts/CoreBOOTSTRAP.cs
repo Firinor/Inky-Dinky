@@ -36,4 +36,10 @@ public class CoreBOOTSTRAP : MonoBehaviour
         player = SaveData.GetPlayer();
         player.FirstLoad();
     }
+
+    [ContextMenu(nameof(ClearAllSaves))]
+    public void ClearAllSaves()
+    {
+        player.ResetProgress();
+    }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4163196019813344185}
   - component: {fileID: 416768186813135903}
   - component: {fileID: 6531080443289730129}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ImageObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8986244018787648372}
   - component: {fileID: 7398811995658788293}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: FlyGood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,4 +182,4 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  lyingDuration: 5
+  lyingDuration: 1

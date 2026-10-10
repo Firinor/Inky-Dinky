@@ -14,23 +14,11 @@ public class PointyPlace : MonoBehaviour
     public bool IsDeadEnd = false;
     
     public PointyPlace BestNeighbor => Neighbors
-        .Where(place => place != null
-            && !place.IsDeadEnd
-            && !place.InGame
-            && place.WayCost < int.MaxValue)
-        .OrderBy(n => n.WayCost)
-        .FirstOrDefault();
-
-    public int BestNeighborWayCost
-    {
-        get
-        {
-            PointyPlace bestNeighbor = BestNeighbor;
-            if (bestNeighbor == null)
-                return int.MaxValue;
-            return bestNeighbor.WayCost;
-        }
-    }
+                .Where(place => !place.IsDeadEnd
+                                && !place.InGame
+                                && place.WayCost < int.MaxValue)
+                .OrderBy(n => n.WayCost)
+                .FirstOrDefault();
 
     public bool IsOpen => Neighbors.Any(n => n == null || n.WayCost < int.MaxValue);
 
@@ -44,10 +32,29 @@ public class PointyPlace : MonoBehaviour
         if(InGame)
             return;
 
-        PointyPlace bestNeighbor = BestNeighbor;
-        
-        if(bestNeighbor == null)
+        if (Neighbors.Any(n => n == null))
+        {
+            WayCost = 0;   
+            if(textTemp != null)
+                textTemp.text = WayCost.ToString();
             return;
+        }
+        
+        PointyPlace bestNeighbor = BestNeighbor;
+
+        if (bestNeighbor == null)
+        {
+            if(textTemp != null)
+                textTemp.text = WayCost.ToString();
+            return;
+        }
+        
+        if (bestNeighbor.WayCost == int.MaxValue)
+        {
+            if(textTemp != null)
+                textTemp.text = WayCost.ToString();
+            return;
+        }
         if (bestNeighbor.WayCost > WayCost)
         {
             Debug.LogError($"bestNeighbor.WayCost({bestNeighbor.WayCost}) > WayCost ({WayCost})");
