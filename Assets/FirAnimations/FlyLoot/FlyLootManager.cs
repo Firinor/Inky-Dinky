@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -33,12 +35,12 @@ public class FlyLootManager : MonoBehaviour
         instance = this;
     }
 
-    public void AnimateGoods(SpriteRenderer goods, Transform startPoint, Transform endPoint, int count = 1)
+    public void AnimateGoods(SpriteRenderer goods, Transform startPoint, Transform endPoint, Action OnEndAction = null, int count = 1)
     {
-        StartCoroutine(AnimateGoodsCoroutine(goods, startPoint, endPoint, count));
+        StartCoroutine(AnimateGoodsCoroutine(goods, startPoint, endPoint, OnEndAction, count));
     }
 
-    private IEnumerator AnimateGoodsCoroutine(SpriteRenderer goods, Transform startPoint, Transform endPoint, int count = 1)
+    private IEnumerator AnimateGoodsCoroutine(SpriteRenderer goods, Transform startPoint, Transform endPoint, Action OnEndAction = null, int count = 1)
     {
        // bool isOffset = count > 1;
         
@@ -55,10 +57,16 @@ public class FlyLootManager : MonoBehaviour
             }
             
             Vector2 randomOffset = Random.insideUnitCircle * spawnRadius;
-            
-            FlyLoot newGoods = Instantiate(prefab, startPoint.position , Quaternion.identity, parent);
-            lootPool.Add(newGoods);
+
+            FlyLoot newGoods = lootPool.FirstOrDefault(loot => !loot.gameObject.activeSelf);
+
+            if (newGoods is null)
+            {
+                newGoods = Instantiate(prefab, startPoint.position , Quaternion.identity, parent);
+                lootPool.Add(newGoods);
+            }
             //if (isOffset)
+            newGoods.OnFlyEndAction = OnEndAction;
             newGoods.SetDestination(goods.sprite, goods.color, endPoint, randomOffset);
             //else
             //    newGoods.SetDestination(goods.sprite, goods.color, endPoint);

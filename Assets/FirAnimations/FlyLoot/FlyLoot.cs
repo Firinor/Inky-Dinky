@@ -23,6 +23,7 @@ public class FlyLoot : MonoBehaviour, IPointerEnterHandler
     private float flyDuration;
 
     public Action OnPointerEnterAction;
+    public Action OnFlyEndAction;
     private bool secondStep;
     
     public void SetDestination(Sprite goods, Color color, Transform endPoint, Vector2 offset = default)
@@ -68,7 +69,9 @@ public class FlyLoot : MonoBehaviour, IPointerEnterHandler
         float t = elapsedTime / flyDuration;
         if (t >= 1)
         {
-            Destroy(gameObject);
+            OnFlyEndAction?.Invoke();
+            OnFlyEndAction = null;
+            gameObject.SetActive(false);
             return;
         }
         

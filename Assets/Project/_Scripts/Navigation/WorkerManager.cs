@@ -24,6 +24,7 @@ public class WorkerManager : MonoBehaviour
     private List<Worker> workers;
     private SaveData player;
 
+    private int workerPlaceIndex = 3;
     private int workerCount = 0;
     private float timerTime = 2f;
     private float loseTimerTime;
@@ -35,6 +36,7 @@ public class WorkerManager : MonoBehaviour
         loseTimerTime = timerTime;
         foreach (WorkerPlace workerPlace in Places)
         {
+            workerPlace.Initialize();
             Vector2 point1 = workerPlace.transform.position;
             workerPlace.NearestPlaces = Enumerable.Range(0, MainImage.Places.GetLength(0))
                 .Select(x => MainImage.Places[x, 0])
@@ -130,7 +132,22 @@ public class WorkerManager : MonoBehaviour
                 workerCount--;
                 MainImage.PixelCount--;
                 targer.Eat();
-                FlyLootManager.instance.AnimateGoods(targer.Renderer, targer.transform, pointsText.transform);
+                Places[workerPlaceIndex].UnlockCounterForAnimations++;
+                int lootIndex = workerPlaceIndex;
+                FlyLootManager.instance.AnimateGoods(targer.Renderer, 
+                    targer.transform, 
+                    Places[workerPlaceIndex].transform,
+                    OnEndAction: () =>
+                    {
+                        Places[lootIndex].ToUnlock(1);
+                    },
+                    3);
+                if (Places[workerPlaceIndex].UnlockCounterForAnimations > Places[workerPlaceIndex].UnlockCount)//Find not open place. or what?
+                    throw new Exception();
+                else if(Places[workerPlaceIndex].UnlockCounterForAnimations == Places[workerPlaceIndex].UnlockCount)
+                {
+                    workerPlaceIndex++;
+                }
                 CheckWin();
             };
             targer.InGame = false;
@@ -328,7 +345,6 @@ public class WorkerManager : MonoBehaviour
         
         return resultVector;
     }
-    
     private List<PointyPlace> GetWayPointyPlace(PointyPlace startPoint)
     {
         List<PointyPlace> result = new List<PointyPlace> { startPoint };
