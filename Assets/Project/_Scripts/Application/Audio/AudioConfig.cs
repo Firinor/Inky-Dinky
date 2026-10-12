@@ -8,15 +8,14 @@ public class AudioConfig : ScriptableObject
     public ClipSettings OpenScroll;
     public ClipSettings CloseScroll;
     public ClipSettings HelpSpell;
-    [Header("Tiles")] 
-    public ClipSettings StartCollide;
-    public ClipSettings EndCollide;
-    public ClipSettings TileSelect;
-    public ClipSettings TileError;
+    [Header("Pixels")] 
+    public ClipSettings BarError;
+    public ClipSettings BarPick;
+    public ClipSettings BarDespawn;
+    public ClipSettings WorkerSpawn;
+    public ClipSettings WorkerEat;
     [Header("Win")] 
     public ClipSettings Win;
     public ClipSettings Lose;
-    public ClipSettings Level;
     public ClipSettings Unlock;
-    public ClipSettings Scores;
 }

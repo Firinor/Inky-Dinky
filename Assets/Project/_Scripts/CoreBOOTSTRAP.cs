@@ -24,7 +24,7 @@ public class CoreBOOTSTRAP : MonoBehaviour
         closeСurtain.Play();//OpenScene
             
         LoadPlayerData();
-        settings.Initialize(bootstrap: true);
+        settings.Initialize();
         
         MainImageManager.Initialize(player);
         ColorJarsManager.Initialize();

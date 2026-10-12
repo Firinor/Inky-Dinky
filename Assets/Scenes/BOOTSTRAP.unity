@@ -245,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 5422682627721976724, guid: bf3b4e58c3eaad0458f1d851a0f316c8, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 0f1849b632b243941bcc431c039d928a, type: 3}
+      objectReference: {fileID: 8300000, guid: fa3ca5fd69ad6584d90e59c3e0a3f46b, type: 3}
     - target: {fileID: 5953344943314002560, guid: bf3b4e58c3eaad0458f1d851a0f316c8, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic
@@ -311,6 +311,7 @@ GameObject:
   - component: {fileID: 1961239391}
   - component: {fileID: 1961239390}
   - component: {fileID: 1961239392}
+  - component: {fileID: 1961239393}
   m_Layer: 0
   m_Name: BOOTSTRAP
   m_TagString: Untagged
@@ -360,8 +361,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91735c3a106ba0842bcdcac1bf93ce02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneButton
-  SceneName: WorldMapScene
-  "close\u0421urtain": {fileID: 0}
+  SceneName: GameScene
+  closeCurtain: {fileID: 0}
+--- !u!81 &1961239393
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961239389}
+  m_Enabled: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

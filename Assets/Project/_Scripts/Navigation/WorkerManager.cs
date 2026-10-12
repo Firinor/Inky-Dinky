@@ -15,7 +15,7 @@ public class WorkerManager : MonoBehaviour
     public Transform ColorBarsFlyParent;
     public MainImageManager MainImage;
     public Transform zoomPlug;
-    public TextMeshProUGUI pointsText;
+    public Transform NoLockPlaces;
     public float deltaColor = 0.1f;
 
     public GameObject WinPopup;
@@ -23,8 +23,7 @@ public class WorkerManager : MonoBehaviour
     
     private List<Worker> workers;
     private SaveData player;
-
-    private int workerPlaceIndex = 3;
+    
     private int workerCount = 0;
     private float timerTime = 2f;
     private float loseTimerTime;
@@ -132,22 +131,25 @@ public class WorkerManager : MonoBehaviour
                 workerCount--;
                 MainImage.PixelCount--;
                 targer.Eat();
-                Places[workerPlaceIndex].UnlockCounterForAnimations++;
-                int lootIndex = workerPlaceIndex;
+                Transform targetPlace = NoLockPlaces;
+                WorkerPlace targetWorkPlace = Places.FirstOrDefault(p => p.IsLocked);
+                if (targetWorkPlace != null)
+                {
+                    targetWorkPlace.UnlockCounterForAnimations++;
+                    if (targetWorkPlace.UnlockCounterForAnimations >= targetWorkPlace.UnlockCount)
+                    {
+                        targetWorkPlace.IsLocked = false;
+                    }
+                    targetPlace = targetWorkPlace.transform;
+                }
                 FlyLootManager.instance.AnimateGoods(targer.Renderer, 
                     targer.transform, 
-                    Places[workerPlaceIndex].transform,
+                    targetPlace,
                     OnEndAction: () =>
                     {
-                        Places[lootIndex].ToUnlock(1);
+                        targetWorkPlace?.ToUnlock(1);
                     },
                     3);
-                if (Places[workerPlaceIndex].UnlockCounterForAnimations > Places[workerPlaceIndex].UnlockCount)//Find not open place. or what?
-                    throw new Exception();
-                else if(Places[workerPlaceIndex].UnlockCounterForAnimations == Places[workerPlaceIndex].UnlockCount)
-                {
-                    workerPlaceIndex++;
-                }
                 CheckWin();
             };
             targer.InGame = false;

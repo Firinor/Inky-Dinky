@@ -305,6 +305,7 @@ MonoBehaviour:
   isWarningNumber: 2147483647
   UnlockCount: 0
   UnlockCounterForAnimations: 0
+  IsLocked: 0
   LockImgage: {fileID: 0}
   LockObject: {fileID: 0}
 --- !u!114 &30688810
@@ -1087,9 +1088,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 88532242}
-        m_TargetAssemblyTypeName: DestroyADS, Assembly-CSharp
-        m_MethodName: DoDestroy
+      - m_Target: {fileID: 2115283772}
+        m_TargetAssemblyTypeName: WorkerPlace, Assembly-CSharp
+        m_MethodName: UnlockADS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2400,11 +2401,109 @@ Transform:
   m_Children:
   - {fileID: 438680741}
   - {fileID: 1327980314}
+  - {fileID: 1610419390}
   - {fileID: 748659018}
   - {fileID: 1399988153}
   - {fileID: 478497075}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &344075348
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818863429469157076, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6114439139119865118, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+      propertyPath: m_Name
+      value: AudioPool
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+--- !u!82 &344075349 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7345764972539667096, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075350 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3421381630068986394, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075351 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5144924383391975932, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075352 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8080785089052705989, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075353 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6328242476521299265, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075354 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5893287408330077135, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075355 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1868954017890949708, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &344075356 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3650910718550787051, guid: ae553fe8505d63f45b6699e7b877f5cb, type: 3}
+  m_PrefabInstance: {fileID: 344075348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &351243239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,6 +2598,7 @@ MonoBehaviour:
   isWarningNumber: 2147483647
   UnlockCount: 0
   UnlockCounterForAnimations: 0
+  IsLocked: 0
   LockImgage: {fileID: 0}
   LockObject: {fileID: 0}
 --- !u!1 &372308731
@@ -3473,8 +3573,8 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3482,14 +3582,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3600,6 +3692,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!81 &519420033
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
 --- !u!1001 &527436200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5015,7 +5115,7 @@ MonoBehaviour:
   ColorBarsFlyParent: {fileID: 1807296775}
   MainImage: {fileID: 1327980315}
   zoomPlug: {fileID: 7755983703435534038, guid: 8825be9c8f35eac49b3942b6ba173870, type: 3}
-  pointsText: {fileID: 2118051180}
+  NoLockPlaces: {fileID: 769764949}
   deltaColor: 0.3
   WinPopup: {fileID: 1765329125}
   LosePopup: {fileID: 1006784890}
@@ -5054,9 +5154,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 289, y: -15}
+  m_AnchoredPosition: {x: 242.75002, y: -57.25}
   m_SizeDelta: {x: 92.5, y: 84.5}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769764950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5679,8 +5779,9 @@ MonoBehaviour:
   bar: {fileID: 0}
   cooldown: 0
   isWarningNumber: 2147483647
-  UnlockCount: 500
-  UnlockCounterForAnimations: 0
+  UnlockCount: 501
+  UnlockCounterForAnimations: 1
+  IsLocked: 1
   LockImgage: {fileID: 2042681289}
   LockObject: {fileID: 1710046768}
 --- !u!1001 &836560503
@@ -8162,6 +8263,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1964527832}
     m_Modifications:
+    - target: {fileID: 627928827076077197, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 627928827076077197, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 627928827076077197, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -370
+      objectReference: {fileID: 0}
     - target: {fileID: 1412885577990774351, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -8174,13 +8287,45 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1412885577990774351, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.400009
+      objectReference: {fileID: 0}
     - target: {fileID: 2073968631847452047, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
       propertyPath: m_Name
       value: Settings
       objectReference: {fileID: 0}
+    - target: {fileID: 2621947226584763181, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621947226584763181, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2621947226584763181, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -367.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6051833491652944164, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6051833491652944164, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.400009
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701471366170356207, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701471366170356207, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701471366170356207, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -480.3
       objectReference: {fileID: 0}
     - target: {fileID: 7426345661996438781, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
       propertyPath: m_Pivot.x
@@ -8261,6 +8406,30 @@ PrefabInstance:
     - target: {fileID: 7426345661996438781, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784631612649441754, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784631612649441754, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7784631612649441754, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -232.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068257428197213541, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068257428197213541, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8068257428197213541, guid: ce576fc6275616949a5dea67a2e7b37c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -232.32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9046,9 +9215,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1598677746}
-        m_TargetAssemblyTypeName: DestroyADS, Assembly-CSharp
-        m_MethodName: DoDestroy
+      - m_Target: {fileID: 1655366003}
+        m_TargetAssemblyTypeName: WorkerPlace, Assembly-CSharp
+        m_MethodName: UnlockADS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9108,6 +9277,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00fb66c21e6a35c4286076f2da696716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DestroyADS
+--- !u!1001 &1610419389
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 334071161}
+    m_Modifications:
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: audioPool.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[0]'
+      value: 
+      objectReference: {fileID: 344075350}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[1]'
+      value: 
+      objectReference: {fileID: 344075356}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[2]'
+      value: 
+      objectReference: {fileID: 344075355}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[3]'
+      value: 
+      objectReference: {fileID: 344075354}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[4]'
+      value: 
+      objectReference: {fileID: 344075349}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[5]'
+      value: 
+      objectReference: {fileID: 344075353}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[6]'
+      value: 
+      objectReference: {fileID: 344075352}
+    - target: {fileID: 2924360618503570296, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: 'audioPool.Array.data[7]'
+      value: 
+      objectReference: {fileID: 344075351}
+    - target: {fileID: 3095960951961301215, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542534305926390414, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542534305926390414, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542534305926390414, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7542534305926390414, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+--- !u!4 &1610419390 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7542534305926390414, guid: 4a87304bb7f59974a8494d860fe9d2b0, type: 3}
+  m_PrefabInstance: {fileID: 1610419389}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1614687038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9294,7 +9537,8 @@ MonoBehaviour:
   cooldown: 0
   isWarningNumber: 2147483647
   UnlockCount: 2147483647
-  UnlockCounterForAnimations: 0
+  UnlockCounterForAnimations: 1
+  IsLocked: 1
   LockImgage: {fileID: 196423707}
   LockObject: {fileID: 1598677741}
 --- !u!114 &1655366004
@@ -10014,9 +10258,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1710046773}
-        m_TargetAssemblyTypeName: DestroyADS, Assembly-CSharp
-        m_MethodName: DoDestroy
+      - m_Target: {fileID: 827668179}
+        m_TargetAssemblyTypeName: WorkerPlace, Assembly-CSharp
+        m_MethodName: UnlockADS
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10734,6 +10978,7 @@ MonoBehaviour:
   isWarningNumber: 2147483647
   UnlockCount: 0
   UnlockCounterForAnimations: 0
+  IsLocked: 0
   LockImgage: {fileID: 0}
   LockObject: {fileID: 0}
 --- !u!1 &1901891114
@@ -12439,8 +12684,9 @@ MonoBehaviour:
   bar: {fileID: 0}
   cooldown: 0
   isWarningNumber: 2147483647
-  UnlockCount: 200
-  UnlockCounterForAnimations: 0
+  UnlockCount: 202
+  UnlockCounterForAnimations: 1
+  IsLocked: 1
   LockImgage: {fileID: 607407370}
   LockObject: {fileID: 88532241}
 --- !u!1 &2118051178
@@ -12815,6 +13061,7 @@ SceneRoots:
   - {fileID: 999462523}
   - {fileID: 334071161}
   - {fileID: 519420032}
+  - {fileID: 344075348}
   - {fileID: 1985770962}
   - {fileID: 1881753249}
   - {fileID: 40614479}

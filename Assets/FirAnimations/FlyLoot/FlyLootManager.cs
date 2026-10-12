@@ -65,11 +65,14 @@ public class FlyLootManager : MonoBehaviour
                 newGoods = Instantiate(prefab, startPoint.position , Quaternion.identity, parent);
                 lootPool.Add(newGoods);
             }
-            //if (isOffset)
+            else
+            {
+                newGoods.ResetLoot();
+                newGoods.transform.position = startPoint.position;
+                newGoods.gameObject.SetActive(true);
+            }
             newGoods.OnFlyEndAction = OnEndAction;
             newGoods.SetDestination(goods.sprite, goods.color, endPoint, randomOffset);
-            //else
-            //    newGoods.SetDestination(goods.sprite, goods.color, endPoint);
             newGoods.OnPointerEnterAction += FlyToEnd;
         }
     }

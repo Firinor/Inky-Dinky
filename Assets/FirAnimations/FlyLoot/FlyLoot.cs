@@ -101,4 +101,16 @@ public class FlyLoot : MonoBehaviour, IPointerEnterHandler
         
         OnPointerEnterAction?.Invoke();
     }
+
+    public void ResetLoot()
+    {
+        offset = default;
+        startPosition= default;
+        elapsedTime= default;
+        dropDuration= default;
+        flyDuration= default;
+        OnPointerEnterAction = null;
+        OnFlyEndAction = null;
+        secondStep = false;
+    }
 }

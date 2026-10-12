@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e031ad45224a3990ec724b18344f61, type: 3}
+  m_Name: Main Audio Config
+  m_EditorClassIdentifier: Assembly-CSharp::AudioConfig
+  ButtonClick:
+    Clips:
+    - {fileID: 8300000, guid: 4bf69e877777a9c4eb0f48472d9c2ab0, type: 3}
+    Volume: 1
+  OpenScroll:
+    Clips: []
+    Volume: 0.444
+  CloseScroll:
+    Clips: []
+    Volume: 0.529
+  HelpSpell:
+    Clips: []
+    Volume: 0.519
+  BarError:
+    Clips: []
+    Volume: 1
+  BarPick:
+    Clips:
+    - {fileID: 8300000, guid: 0a0079c251d0e684aa12a21f302cd86e, type: 3}
+    Volume: 1
+  BarDespawn:
+    Clips:
+    - {fileID: 8300000, guid: 4ae8462476de58c41bbedeaaa2fe185a, type: 3}
+    Volume: 0.376
+  WorkerSpawn:
+    Clips:
+    - {fileID: 8300000, guid: 322ee7294128f144ba868f77a169c5c3, type: 3}
+    Volume: 1
+  WorkerEat:
+    Clips:
+    - {fileID: 8300000, guid: fa3ca5fd69ad6584d90e59c3e0a3f46b, type: 3}
+    Volume: 1
+  Win:
+    Clips: []
+    Volume: 0
+  Lose:
+    Clips: []
+    Volume: 0
+  Unlock:
+    Clips: []
+    Volume: 0

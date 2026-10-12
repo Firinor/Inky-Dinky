@@ -46,23 +46,26 @@ public class SoundManager : MonoBehaviour
    {
       Play(position, config.HelpSpell, isPriority: true);
    }
-   public void PlayTileStartCollide(Vector3 position = default)
+   public void PlayBarError(Vector3 position = default)
    {
-      Play(position, config.StartCollide, isPriority: true);
+      Play(position, config.BarError, isPriority: true);
    }
-   public void PlayTileEndCollide(Vector3 position = default)
+   public void PlayBarPick(Vector3 position = default)
    {
-      Play(position, config.EndCollide, isPriority: true);
+      Play(position, config.BarPick, isPriority: true);
    }
-   public void PlayTileSelect(Vector3 position = default, float volumeMultiplier = 1f)
+   public void PlayBarDespawn(Vector3 position = default)
    {
-      Play(position, config.TileSelect, volumeMultiplier: volumeMultiplier);
+      Play(position, config.BarDespawn, isPriority: true);
    }
-   public void PlayTileError(Vector3 position = default)
+   public void PlayWorkerSpawn(Vector3 position = default)
    {
-      Play(position, config.TileError);
+      Play(position, config.WorkerSpawn, isPriority: true);
    }
-   
+   public void PlayWorkerEat(Vector3 position = default)
+   {
+      Play(position, config.WorkerEat, isPriority: true);
+   }
    public void PlayWin(Vector3 position = default)
    {
       Play(position, config.Win, isPriority: true);
@@ -71,36 +74,9 @@ public class SoundManager : MonoBehaviour
    {
       Play(position, config.Lose, isPriority: true);
    }
-   public void PlayLevel(Vector3 position = default)
-   {
-      Play(position, config.Level, isPriority: true);
-   }
    public void PlayUnlock(Vector3 position = default)
    {
       Play(position, config.Unlock, isPriority: true);
-   }
-   public void PlayScores()
-   {
-      scoresSource = audioPool[soundIndex];
-
-      soundIndex++;
-      soundIndex %= audioPool.Count;
-   
-      ClipSettings clipData = config.Scores;
-      
-      scoresSource.gameObject.SetActive(true);
-      scoresSource.transform.position = default;
-      scoresSource.pitch = 1 + Random.Range(-0.05f, 0.05f);
-      scoresSource.clip = clipData.Clip;
-      scoresSource.volume = clipData.Volume;
-      scoresSource.loop = true;
-      scoresSource.Play();
-   }
-   public void StopScores()
-   {
-      scoresSource.Stop();
-      scoresSource.gameObject.SetActive(false);
-      scoresSource = null;
    }
    
    public void Play(Vector3 position, ClipSettings clipData, bool isPriority = false, float volumeMultiplier = 1)
@@ -116,7 +92,7 @@ public class SoundManager : MonoBehaviour
       soundIndex %= audioPool.Count;
 
       source.gameObject.SetActive(true);
-      source.transform.position = position;
+      //source.transform.position = position;
       source.pitch = 1 + Random.Range(-0.05f, 0.05f);
       source.volume = clipData.Volume * volumeMultiplier;
       
