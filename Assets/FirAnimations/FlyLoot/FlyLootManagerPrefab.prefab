@@ -53,8 +53,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 764054163607162857}
   prefab: {fileID: 7398811995658788293, guid: d80d94143d0eb814f861ea2793f2d307, type: 3}
-  spawnRadius: 500
-  spawnTotalTime: 1
+  spawnRadius: 0.2
+  spawnTotalTime: 0.6
   testSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   testStartpoint: {fileID: 5399475265826687778}
   testEndpoint: {fileID: 617556198147667077}

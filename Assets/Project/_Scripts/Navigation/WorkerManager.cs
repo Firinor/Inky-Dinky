@@ -27,6 +27,8 @@ public class WorkerManager : MonoBehaviour
     private int workerCount = 0;
     private float timerTime = 2f;
     private float loseTimerTime;
+
+    private int workerSortingLayer = 100;
     
     public void Initialize(SaveData player)
     {
@@ -73,16 +75,17 @@ public class WorkerManager : MonoBehaviour
             bar.PositionAnimation.EndPosition = -rectTransform.anchoredPosition3D;
             rectTransform.SetParent(ColorBarsFlyParent);
             //bar.transform.localPosition = Vector3.zero;
+            bar.InAnimation = true;
             bar.PositionAnimation.OnComplete = () =>
             {
                 bar.transform.SetParent(workerPlace.transform, worldPositionStays: true);
                 bar.enabled = true;
+                bar.InAnimation = false;
             };
             bar.PositionAnimation.Play();
             bar.ZoomAnimation.Play();
             return true;
         }
-        
         return false;
     }
 
@@ -91,6 +94,8 @@ public class WorkerManager : MonoBehaviour
         foreach (WorkerPlace workerPlace in Places)
         {
             if (workerPlace.bar is null)
+                continue;
+            if (workerPlace.bar.InAnimation)
                 continue;
             if (workerPlace.enabled)
             {
@@ -120,17 +125,15 @@ public class WorkerManager : MonoBehaviour
             newWorker.transform.position = workerPlace.transform.position;
             newWorker.Way = way;
             newWorker.Sprite.color = workerPlace.bar.Image.color;
+            SoundManager.Instance.PlayWorkerSpawn();
             newWorker.ToStart();
             newWorker.OnFirstPoint = () =>
             {
                 newWorker.OnFirstPoint = null;
                 targer.CheckWayCost();
             };
-            newWorker.OnEndWay = () =>
+            newWorker.OnStartEat = () =>
             {
-                workerCount--;
-                MainImage.PixelCount--;
-                targer.Eat();
                 Transform targetPlace = NoLockPlaces;
                 WorkerPlace targetWorkPlace = Places.FirstOrDefault(p => p.IsLocked);
                 if (targetWorkPlace != null)
@@ -150,6 +153,12 @@ public class WorkerManager : MonoBehaviour
                         targetWorkPlace?.ToUnlock(1);
                     },
                     3);
+            };
+            newWorker.OnEndWay = () =>
+            {
+                workerCount--;
+                MainImage.PixelCount--;
+                targer.Eat();
                 CheckWin();
             };
             targer.InGame = false;
@@ -165,13 +174,16 @@ public class WorkerManager : MonoBehaviour
                 var animationZoom = workerPlace.bar.gameObject.AddComponent<FirZoomAnimation>();
                 animationZoom.StartZoom = Vector3.one;
                 animationZoom.EndZoom = Vector3.zero;
+                GameObject bar = workerPlace.bar.gameObject;
                 animationZoom.OnComplete += () =>
                 {
-                    Destroy(workerPlace.bar.gameObject);
-                    workerPlace.bar = null;
+                    Destroy(bar);
                 };
+                workerPlace.bar = null;
+                bar.transform.SetParent(workerPlace.transform.parent, worldPositionStays:true);
                 animationZoom.Curve = curveZoom;
                 animationZoom.Play();
+                SoundManager.Instance.PlayBarDespawn();
             }
             else
             {
@@ -197,8 +209,11 @@ public class WorkerManager : MonoBehaviour
         }
 
         loseTimerTime -= Time.deltaTime;
-        if(loseTimerTime <= 0)
-            LosePopup.SetActive(true);
+        if(loseTimerTime > 0)
+            return;
+        
+        LosePopup.SetActive(true);
+        SoundManager.Instance.PlayLose();
     }
     
     private void CheckWin()
@@ -208,6 +223,7 @@ public class WorkerManager : MonoBehaviour
 
         player.Level++;
         player.Save();
+        SoundManager.Instance.PlayWin();
         WinPopup.SetActive(true);
     }
 
@@ -220,8 +236,13 @@ public class WorkerManager : MonoBehaviour
                 continue;
             newWorker = WorkerPool.GetChild(i).GetComponent<Worker>();
         }
-        if(newWorker is null)
+
+        if (newWorker is null)
+        {
             newWorker = Instantiate(WorkerPerfab, WorkerPool);
+            newWorker.GetComponent<SpriteRenderer>().sortingOrder = workerSortingLayer;
+            workerSortingLayer++;
+        }
         return newWorker;
     }
     private PointyPlace GetColorBar(WorkerPlace workerPlace, out List<Vector3> way)

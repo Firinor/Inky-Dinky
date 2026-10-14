@@ -12,9 +12,12 @@ namespace FirAnimations
         [Range(0, 1)]
         protected float Time;
         public bool Loop;
+        public bool IsReverse;
         public AnimationCurve Curve = AnimationCurve.EaseInOut(0,0,1,1);
         protected float _endTime => Curve.keys[Curve.length-1].time;
         public Action OnComplete;
+
+        public float AnimationTime => Time;
         
         public virtual void Initialize()
         {
@@ -26,11 +29,22 @@ namespace FirAnimations
         { 
             ToStartPoint();
             enabled = true;
+            IsReverse = false;
+        }
+        
+        public virtual void Reverse()
+        { 
+            ToEndPoint();
+            enabled = true;
+            IsReverse = true;
         }
 
         public virtual void Stop()
         {
-            ToEndPoint();
+            if(IsReverse)
+                ToStartPoint();
+            else
+                ToEndPoint();
             enabled = false;
         }
 
@@ -60,23 +74,45 @@ namespace FirAnimations
         
         public void Update()
         {
-            if (Time >= 1)
+            if (IsReverse)
             {
-                if (Loop)
+                if (Time < 0)
                 {
-                    Time %= 1;
+                    if (Loop)
+                    {
+                        Time %= 1;
+                        Time++;
+                    }
+                    else
+                    {
+                        Time = 0;
+                        enabled = false;
+                        MoveByDelta();
+                        OnComplete?.Invoke();
+                        return;
+                    }
                 }
-                else
-                {
-                    Time = 1;
-                    enabled = false;
-                    MoveByDelta();
-                    OnComplete?.Invoke();
-                    return;
-                }
+                Time -= UnityEngine.Time.unscaledDeltaTime/_endTime;
             }
-            
-            Time += UnityEngine.Time.unscaledDeltaTime/_endTime;
+            else
+            {
+                if (Time >= 1)
+                {
+                    if (Loop)
+                    {
+                        Time %= 1;
+                    }
+                    else
+                    {
+                        Time = 1;
+                        enabled = false;
+                        MoveByDelta();
+                        OnComplete?.Invoke();
+                        return;
+                    }
+                }
+                Time += UnityEngine.Time.unscaledDeltaTime/_endTime;
+            }
             MoveByDelta();
 #if UNITY_EDITOR
             EditorApplication.QueuePlayerLoopUpdate();

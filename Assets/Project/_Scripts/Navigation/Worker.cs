@@ -7,16 +7,17 @@ using UnityEngine;
 public class Worker : MonoBehaviour
 {
     public Action OnEndWay;
+    public Action OnStartEat;
     public Action OnFirstPoint;
     public List<Vector3> Way;
     public float speed = 1f;
     public float rotationSpeed = 1f;
-    public float eatTime = .6f;
+    public float eatTime = .2f;
     public Sprite[] MoveFrames;
     private int frameIndex;
     public Sprite EatFrame;
     public SpriteRenderer Sprite;
-    public float flipTime = .2f;
+    public float flipTime = .3f;
     public float distansToPoint = 1f;
     public FirZoomAnimation ZoomAnimation;
 
@@ -84,10 +85,20 @@ public class Worker : MonoBehaviour
     {
         isEndCoroutine = true;
         Sprite.sprite = EatFrame;
+        OnStartEat?.Invoke();
         SoundManager.Instance.PlayWorkerEat();
         yield return new WaitForSeconds(eatTime);
-        gameObject.SetActive(false);
-        isEndCoroutine = false;
+        SoundManager.Instance.PlayWorkerEat();
+        yield return new WaitForSeconds(eatTime);
+        SoundManager.Instance.PlayWorkerEat();
+        yield return new WaitForSeconds(eatTime);
+        ZoomAnimation.OnComplete = () =>
+        {
+            ZoomAnimation.OnComplete = null;
+            gameObject.SetActive(false);
+            isEndCoroutine = false;
+        };
+        ZoomAnimation.Reverse();
         OnEndWay?.Invoke();
     }
 }

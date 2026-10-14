@@ -6,19 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/play_game_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/play_game_1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/settings.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManagerPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManagerPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/_FirAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/_FirAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Materials/Custom_SpriteOutlineURP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Materials/Custom_SpriteOutlineURP.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Bubble2.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Bubble2.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Bubble3.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Bubble3.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Bubble6.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Bubble6.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/rodent-eating1.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/rodent-eating1.mp3.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/ColorBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/ColorBar.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +97,15 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="6532">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="6532" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -143,7 +149,8 @@
       <workItem from="1791801322037" duration="8238000" />
       <workItem from="1791831148201" duration="7556000" />
       <workItem from="1791893607216" duration="1220000" />
-      <workItem from="1791938156969" duration="2844000" />
+      <workItem from="1791938156969" duration="3696000" />
+      <workItem from="1791964685970" duration="9135000" />
     </task>
     <servers />
   </component>
@@ -184,32 +191,6 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/PointyPlace.cs</url>
-          <line>53</line>
-          <properties documentPath="E:\UNITY projects\FirGames\Inky-Dinky\Repo\Inky-Dinky\Assets\Project\_Scripts\Navigation\PointyPlace.cs" containingFunctionPresentation="Local function 'CheckWayCost'">
-            <startOffsets>
-              <option value="1345" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1365" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs</url>
-          <line>34</line>
-          <properties documentPath="E:\UNITY projects\FirGames\Inky-Dinky\Repo\Inky-Dinky\Assets\Project\_Scripts\Application\Audio\SoundManager.cs" containingFunctionPresentation="Method 'PlayButtonClick'">
-            <startOffsets>
-              <option value="810" />
-            </startOffsets>
-            <endOffsets>
-              <option value="863" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Settings/Settings.cs</url>
           <line>100</line>
           <properties documentPath="E:\UNITY projects\FirGames\Inky-Dinky\Repo\Inky-Dinky\Assets\Project\_Scripts\Application\Settings\Settings.cs" containingFunctionPresentation="Lambda expression inside Method 'Subscribe'">
@@ -221,6 +202,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs</url>
+          <line>50</line>
+          <properties documentPath="E:\UNITY projects\FirGames\Inky-Dinky\Repo\Inky-Dinky\Assets\Project\_Scripts\Application\Audio\SoundManager.cs" containingFunctionPresentation="Method 'PlayBarError'">
+            <startOffsets>
+              <option value="1317" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1367" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

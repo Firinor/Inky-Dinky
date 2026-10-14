@@ -13,6 +13,8 @@ public class ColorBar : MonoBehaviour
     public FirPositionAnimation PositionAnimation;
     public FirZoomAnimation ZoomAnimation;
     public static WorkerManager WorkerManager;
+
+    public bool InAnimation;
     
     public void Instantiate()
     {
@@ -22,14 +24,23 @@ public class ColorBar : MonoBehaviour
     public void TryWork()
     {
         if (transform.GetSiblingIndex() != 0)
+        {
+            SoundManager.Instance.PlayBarError();      
             ErrorAnimation.Play();
+        }
         else
         {
             bool isAdded = WorkerManager.TryAddColorBar(this);
-            if(isAdded)
+            if (isAdded)
+            {
+                SoundManager.Instance.PlayBarPick();   
                 Button.onClick.RemoveAllListeners();
+            }
             else
+            {
+                SoundManager.Instance.PlayBarError();   
                 ErrorAnimation.Play();
+            }
         }
     }
 

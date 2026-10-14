@@ -72,7 +72,8 @@ public class FlyLootManager : MonoBehaviour
                 newGoods.gameObject.SetActive(true);
             }
             newGoods.OnFlyEndAction = OnEndAction;
-            newGoods.SetDestination(goods.sprite, goods.color, endPoint, randomOffset);
+            Color newColor = WorkerManager.GetSimilarColorRGB(goods.color);
+            newGoods.SetDestination(goods.sprite, newColor, endPoint, randomOffset);
             newGoods.OnPointerEnterAction += FlyToEnd;
         }
     }

@@ -26,7 +26,12 @@ MonoBehaviour:
     Clips: []
     Volume: 0.519
   BarError:
-    Clips: []
+    Clips:
+    - {fileID: 8300000, guid: 0bcc0142ad0f0a34a826a0795362ece6, type: 3}
+    - {fileID: 8300000, guid: f164e024d70b7b94fab74d9fc9ff0e21, type: 3}
+    - {fileID: 8300000, guid: 2c273004e9431d14da7e6d79a844ce3c, type: 3}
+    - {fileID: 8300000, guid: 2699994a70c33ea44b69127459ef90bf, type: 3}
+    - {fileID: 8300000, guid: 788b0902b929c7045bccd8b15a10d315, type: 3}
     Volume: 1
   BarPick:
     Clips:
@@ -35,15 +40,17 @@ MonoBehaviour:
   BarDespawn:
     Clips:
     - {fileID: 8300000, guid: 4ae8462476de58c41bbedeaaa2fe185a, type: 3}
-    Volume: 0.376
+    Volume: 1
   WorkerSpawn:
     Clips:
     - {fileID: 8300000, guid: 322ee7294128f144ba868f77a169c5c3, type: 3}
-    Volume: 1
+    Volume: 0.3
   WorkerEat:
     Clips:
-    - {fileID: 8300000, guid: fa3ca5fd69ad6584d90e59c3e0a3f46b, type: 3}
-    Volume: 1
+    - {fileID: 8300000, guid: 77803d4cab7b656488a16389e2b2395d, type: 3}
+    - {fileID: 8300000, guid: 8ed3ae40803775d42968d504c276ccad, type: 3}
+    - {fileID: 8300000, guid: 512b15bbf08b0f64593ff205e4297f1f, type: 3}
+    Volume: 0.15
   Win:
     Clips: []
     Volume: 0
