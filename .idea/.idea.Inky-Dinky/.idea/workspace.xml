@@ -6,26 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLoot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManagerPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManagerPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/backgrond_04.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/backgrond_04.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/MouseWorker2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/play_game_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/play_game_1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/settings.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/BackgroundMusic.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/BackgroundMusic.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Settings.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Settings.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/AudioConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/AudioConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/WorldMapScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/WorldMapScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/_Scripts/SityScene/MetaBOOTSTRAP.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/_Scripts/SityScene/SityManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@7327e77c1cc2/Shaders/2D/Sprite-Lit-Default.shader" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Majong/Repo/Mahjong/Assets/Project/_Scripts/Core/TilePool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../Majong/Repo/Mahjong/Assets/Project/_Scripts/Meta/MetaBootstrap.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -99,15 +93,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="24860">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="24860" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -149,7 +141,9 @@
       <workItem from="1791613206817" duration="20873000" />
       <workItem from="1791740431996" duration="2974000" />
       <workItem from="1791801322037" duration="8238000" />
-      <workItem from="1791831148201" duration="6643000" />
+      <workItem from="1791831148201" duration="7556000" />
+      <workItem from="1791893607216" duration="1220000" />
+      <workItem from="1791938156969" duration="2844000" />
     </task>
     <servers />
   </component>
@@ -214,19 +208,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs</url>
-          <line>105</line>
-          <properties documentPath="E:\UNITY projects\FirGames\Inky-Dinky\Repo\Inky-Dinky\Assets\Project\_Scripts\Application\Audio\SoundManager.cs" containingFunctionPresentation="Method 'DisableAudioSource'">
-            <startOffsets>
-              <option value="2949" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2973" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Settings/Settings.cs</url>

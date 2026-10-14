@@ -12,6 +12,9 @@ public class Worker : MonoBehaviour
     public float speed = 1f;
     public float rotationSpeed = 1f;
     public float eatTime = .6f;
+    public Sprite[] MoveFrames;
+    private int frameIndex;
+    public Sprite EatFrame;
     public SpriteRenderer Sprite;
     public float flipTime = .2f;
     public float distansToPoint = 1f;
@@ -26,6 +29,8 @@ public class Worker : MonoBehaviour
         wayIndex = 0;
         flipTimer = flipTime;
         LookToTarget();
+        frameIndex = 0;
+        Sprite.sprite = MoveFrames[0];
         ZoomAnimation.Play();
     }
 
@@ -46,17 +51,19 @@ public class Worker : MonoBehaviour
 
     public void Update()
     {
+        if(isEndCoroutine)
+            return;
+        
         flipTimer -= Time.deltaTime;
         if (flipTimer < 0)
         {
             flipTimer += flipTime;
-            Sprite.flipX = !Sprite.flipX;
+            frameIndex++;
+            frameIndex = frameIndex % MoveFrames.Length;
+            Sprite.sprite = MoveFrames[frameIndex];
         }
         
         LookToTarget();
-        
-        if(isEndCoroutine)
-            return;
         
         transform.position = Vector2.MoveTowards(
             transform.position,
@@ -76,7 +83,8 @@ public class Worker : MonoBehaviour
     private IEnumerator EatCoroutine()
     {
         isEndCoroutine = true;
-        //SoundManager.Instance.PlayOpenScroll();
+        Sprite.sprite = EatFrame;
+        SoundManager.Instance.PlayWorkerEat();
         yield return new WaitForSeconds(eatTime);
         gameObject.SetActive(false);
         isEndCoroutine = false;
