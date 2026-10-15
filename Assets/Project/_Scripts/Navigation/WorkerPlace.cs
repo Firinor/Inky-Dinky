@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+#if IS_YANDEX
+using YG;
+#endif
 
 public class WorkerPlace : MonoBehaviour
 {
@@ -25,6 +28,15 @@ public class WorkerPlace : MonoBehaviour
         LockImgage.fillAmount = 0;
     }
     
+    public void UnlockADS()
+    {
+#if IS_YANDEX
+        YG2.RewardedAdvShow("OpenWorkerPlace", DoDestroy);
+#else
+         DoDestroy()
+#endif
+    }
+    
     public void ToUnlock(int count)
     {
         if(LockImgage == null)
@@ -35,27 +47,22 @@ public class WorkerPlace : MonoBehaviour
         if(LockImgage.fillAmount < 1)
             return;
 
-        UnlockADS();
+        DoDestroy();
     }
 
-    public void UnlockADS()
+    public void DoDestroy()
     {
         IsLocked = false;
         Destroy(LockObject);
     }
 
-    public void HandleUpdate()
+    public void HandleUpdate(float multiplicator = 1)
     {
-        cooldown -= Time.deltaTime;
+        cooldown -= Time.deltaTime * multiplicator;
         if (cooldown < 0)
         {
             cooldown += Cooldown;
             enabled = false;
         }
-    }
-
-    public void AddCooldown(float value)
-    {
-        cooldown += value;
     }
 }

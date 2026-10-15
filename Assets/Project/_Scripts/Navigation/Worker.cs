@@ -88,10 +88,13 @@ public class Worker : MonoBehaviour
         OnStartEat?.Invoke();
         SoundManager.Instance.PlayWorkerEat();
         yield return new WaitForSeconds(eatTime);
+        Sprite.flipX = true;
         SoundManager.Instance.PlayWorkerEat();
         yield return new WaitForSeconds(eatTime);
+        Sprite.flipX = false;
         SoundManager.Instance.PlayWorkerEat();
         yield return new WaitForSeconds(eatTime);
+        Sprite.flipX = true;
         ZoomAnimation.OnComplete = () =>
         {
             ZoomAnimation.OnComplete = null;

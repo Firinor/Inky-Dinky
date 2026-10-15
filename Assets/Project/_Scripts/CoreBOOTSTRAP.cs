@@ -1,6 +1,9 @@
 using System.Collections;
 using FirAnimations;
 using UnityEngine;
+#if IS_YANDEX
+using YG;
+#endif
 
 public class CoreBOOTSTRAP : MonoBehaviour
 {
@@ -29,6 +32,10 @@ public class CoreBOOTSTRAP : MonoBehaviour
         MainImageManager.Initialize(player);
         ColorJarsManager.Initialize();
         WorkerManager.Initialize(player);
+        
+#if IS_YANDEX
+        YG2.GameReadyAPI();
+#endif
     }
     
     private void LoadPlayerData()

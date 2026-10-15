@@ -112,5 +112,13 @@ public class ColorJarsManager : MonoBehaviour
             columnIndex %= Collumns.Length;
         }
         ColorBar.WorkerManager = WorkerManager;
+        WorkerManager.ColorBarCount = startColorBars.Count + colorBars.Count;
+    }
+
+    public void AddBar(ColorBar bar)
+    {
+        RectTransform chosen = Collumns.ToList().GetRandom();
+        bar.transform.SetParent(chosen);
+        bar.Instantiate();
     }
 }

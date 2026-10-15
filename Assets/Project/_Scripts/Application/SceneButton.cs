@@ -14,9 +14,8 @@ public class SceneButton : MonoBehaviour
             SceneManager.LoadScene(SceneName);
         else
         {
-            closeCurtain.OnComplete = null;
             closeCurtain.OnComplete = () => { SceneManager.LoadScene(SceneName);};
-            closeCurtain.Play();
+            closeCurtain.Reverse();
         }
     }
 }

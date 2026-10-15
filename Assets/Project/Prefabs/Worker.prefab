@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Worker
   Way: []
-  speed: 3
+  speed: 8
   rotationSpeed: 40
   eatTime: 0.6
   MoveFrames:

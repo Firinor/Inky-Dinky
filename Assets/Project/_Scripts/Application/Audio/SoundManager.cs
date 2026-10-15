@@ -81,6 +81,9 @@ public class SoundManager : MonoBehaviour
    
    public void Play(Vector3 position, ClipSettings clipData, bool isPriority = false, float volumeMultiplier = 1)
    {
+      if(clipData.Clip == null)
+         return;
+      
       AudioSource source = audioPool.FirstOrDefault(a => !a.gameObject.activeSelf);
 
       if (source is null)

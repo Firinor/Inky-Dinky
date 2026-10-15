@@ -6,23 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManagerPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyLootManagerPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/_FirAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/_FirAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Materials/Custom_SpriteOutlineURP.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Materials/Custom_SpriteOutlineURP.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Bubble2.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Bubble2.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Bubble3.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Bubble3.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Bubble6.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Bubble6.mp3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/12342_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/12342_2.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/rodent-eating1.mp3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/rodent-eating1.mp3.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/ColorBar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/ColorBar.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorBar.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Сurtain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Сurtain.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/SceneButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/SceneButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/DestroyADS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/DestroyADS.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +47,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31f3cd5c2a074982a9d5664e7709cac1212400/24/2d657a3c/Update.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31f3cd5c2a074982a9d5664e7709cac1212400/92/c563cc45/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31f3cd5c2a074982a9d5664e7709cac1212400/e3/d3eea4d8/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5016c3a47c2a4a0cbfa8e12eb592279ba6a600/fc/5940b998/Editor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6faa6124236442759eb396cfbfdad50810fc00/ce/cc8119d9/Enumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d777036f2bd145508a141db90ea4210822800/13/ac447d93/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -97,10 +102,10 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="6532">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="8896">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="6532" />
+      <option name="pid" value="8896" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -150,7 +155,8 @@
       <workItem from="1791831148201" duration="7556000" />
       <workItem from="1791893607216" duration="1220000" />
       <workItem from="1791938156969" duration="3696000" />
-      <workItem from="1791964685970" duration="9135000" />
+      <workItem from="1791964685970" duration="10032000" />
+      <workItem from="1792044483250" duration="17411000" />
     </task>
     <servers />
   </component>
@@ -190,19 +196,6 @@
           <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="3" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Settings/Settings.cs</url>
-          <line>100</line>
-          <properties documentPath="E:\UNITY projects\FirGames\Inky-Dinky\Repo\Inky-Dinky\Assets\Project\_Scripts\Application\Settings\Settings.cs" containingFunctionPresentation="Lambda expression inside Method 'Subscribe'">
-            <startOffsets>
-              <option value="2972" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2990" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs</url>
           <line>50</line>

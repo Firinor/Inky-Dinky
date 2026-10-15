@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainImageManager : MonoBehaviour
 {
@@ -12,6 +15,8 @@ public class MainImageManager : MonoBehaviour
     public float deltaX;
 
     public Sprite[] Levels;
+    public Sprite[] Bioms;
+    public Image Background;
     
     public static Sprite MainSprite;
     private const int maxPointyCount = 10000;
@@ -26,7 +31,55 @@ public class MainImageManager : MonoBehaviour
     
     private void LoadLevel(int level)
     {
-        MainSprite = Levels[level];
+        bool isOverLevel = false;
+        if (level >= Levels.Length)
+        {
+            level = UnityEngine.Random.Range(0, Levels.Length);
+            isOverLevel = true;
+        }
+        if (isOverLevel)
+            MainSprite = GetRandomColorLevel(Levels[level]);
+        else
+            MainSprite = Levels[level];
+        Background.sprite = Bioms[level % Bioms.Length];
+    }
+    
+    private Sprite GetRandomColorLevel(Sprite source, float tolerance = 0.01f)
+    {
+        Texture2D result = new Texture2D((int)source.rect.width, (int)source.rect.height);
+        
+        Texture2D tex = source.texture;
+        Rect rect = source.textureRect;
+        
+        Color[] pixels = tex.GetPixels(
+            (int)rect.x, (int)rect.y,
+            (int)rect.width, (int)rect.height
+        );
+        
+        var shuffleColors = pixels
+            .Where(c => c.a > .8f)
+            .GroupBy(c => c)
+            .ToDictionary(g => g.Key, g => g.Key);
+
+        List<Color> colors = shuffleColors.Keys.ToList();
+        List<Color> shuffledColors = shuffleColors.Keys.ToList();
+        shuffledColors.Shuffle();
+        int index = 0;
+        foreach (var color in colors)
+        {
+            shuffleColors[color] = shuffledColors[index];
+            index++;
+        }
+        for (int i = 0; i < pixels.Length; i++)
+        {
+            if (pixels[i].a < .8f)
+                continue;
+            pixels[i] = shuffleColors[pixels[i]];
+        }
+        result.SetPixels(pixels);
+        result.Apply();
+        
+        return Sprite.Create(result, new Rect(0,0,rect.width, rect.height), new Vector2(.5f,1f));
     }
     
     [ContextMenu(nameof(CreateMainImage))]
@@ -45,7 +98,7 @@ public class MainImageManager : MonoBehaviour
             (int)rect.x, (int)rect.y,
             (int)rect.width, (int)rect.height
         );
-
+        
         int w = (int)rect.width;
         int h = (int)rect.height;
         

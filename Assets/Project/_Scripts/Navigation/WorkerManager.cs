@@ -1,9 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
-using TMPro;
 using UnityEngine;
+
+#if IS_YANDEX
+using YG;
+#endif
+
 using Random = UnityEngine.Random;
 
 public class WorkerManager : MonoBehaviour
@@ -14,10 +17,17 @@ public class WorkerManager : MonoBehaviour
     public Transform PointyPool;
     public Transform ColorBarsFlyParent;
     public MainImageManager MainImage;
+    public ColorJarsManager ColorJarsManager;
     public Transform zoomPlug;
     public Transform NoLockPlaces;
     public float deltaColor = 0.1f;
 
+    public int ColorBarCount;
+    public float fastWorkersSpeed = 6;
+    public float slowWorkersSpeed = 2;
+    private bool isWorkersSpeed = false;
+    public float fastWorkersSpawnMultiplicator = 2;
+    
     public GameObject WinPopup;
     public GameObject LosePopup;
     
@@ -58,7 +68,7 @@ public class WorkerManager : MonoBehaviour
             if(workerPlace.transform.childCount > 0)
                 continue;
             workerPlace.bar = bar;
-            workerPlace.AddCooldown(bar.PositionAnimation.Curve.keys[^1].time);
+            //workerPlace.AddCooldown(bar.PositionAnimation.Curve.keys[^1].time);
             RectTransform rectTransform = bar.GetComponent<RectTransform>();
             Transform transformPlug = bar.transform.parent;
             rectTransform.SetParent(ColorBarsFlyParent, worldPositionStays: true);
@@ -84,6 +94,9 @@ public class WorkerManager : MonoBehaviour
             };
             bar.PositionAnimation.Play();
             bar.ZoomAnimation.Play();
+            ColorBarCount--;
+            if (ColorBarCount <= 0)
+                isWorkersSpeed = true;
             return true;
         }
         return false;
@@ -99,7 +112,7 @@ public class WorkerManager : MonoBehaviour
                 continue;
             if (workerPlace.enabled)
             {
-                workerPlace.HandleUpdate();
+                workerPlace.HandleUpdate(isWorkersSpeed ? fastWorkersSpawnMultiplicator : 1);
                 continue;
             }
             if (workerPlace.bar.Count <= 0)
@@ -124,6 +137,7 @@ public class WorkerManager : MonoBehaviour
             workerCount++;
             newWorker.transform.position = workerPlace.transform.position;
             newWorker.Way = way;
+            newWorker.speed = isWorkersSpeed ? fastWorkersSpeed : slowWorkersSpeed;
             newWorker.Sprite.color = workerPlace.bar.Image.color;
             SoundManager.Instance.PlayWorkerSpawn();
             newWorker.ToStart();
@@ -214,6 +228,35 @@ public class WorkerManager : MonoBehaviour
         
         LosePopup.SetActive(true);
         SoundManager.Instance.PlayLose();
+    }
+
+    public void ReviewGame()
+    {
+#if IS_YANDEX
+        YG2.RewardedAdvShow("Shuffle", ClearWorkplace);
+#else
+        ClearWorkplace();
+#endif
+    }
+
+    private void ClearWorkplace()
+    {
+        List<ColorBar> candidats = new();
+        foreach (WorkerPlace workerPlace in Places)
+        {
+            ColorBar bar = workerPlace.GetComponentInChildren<ColorBar>();
+            if (bar == null) 
+                continue;
+            candidats.Add(bar);
+        }
+
+        ColorBar chosen = candidats.GetRandom();
+        WorkerPlace place = chosen.GetComponentInParent<WorkerPlace>();
+        place.bar = null;
+        place.isWarningNumber = int.MaxValue;
+        ColorJarsManager.AddBar(chosen);
+        LosePopup.SetActive(false);
+        loseTimerTime = timerTime;
     }
     
     private void CheckWin()
