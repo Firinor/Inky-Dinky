@@ -6,27 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/BuildLogYG2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/12342_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/12342_2.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Сurtain.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Сurtain.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/SceneButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/SceneButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/ColorJarsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/DestroyADS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/DestroyADS.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,15 +81,13 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="8896">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="8896" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -156,7 +133,9 @@
       <workItem from="1791893607216" duration="1220000" />
       <workItem from="1791938156969" duration="3696000" />
       <workItem from="1791964685970" duration="10032000" />
-      <workItem from="1792044483250" duration="17411000" />
+      <workItem from="1792044483250" duration="18189000" />
+      <workItem from="1792699472483" duration="751000" />
+      <workItem from="1792782610822" duration="1569000" />
     </task>
     <servers />
   </component>
