@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -136,6 +134,7 @@
       <workItem from="1792044483250" duration="18189000" />
       <workItem from="1792699472483" duration="751000" />
       <workItem from="1792782610822" duration="1569000" />
+      <workItem from="1792965501277" duration="98000" />
     </task>
     <servers />
   </component>
