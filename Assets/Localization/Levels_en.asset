@@ -75,7 +75,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55468164308992
-    m_Localized: Lvl 15. Chips
+    m_Localized: Lvl 15. Nachos
     m_Metadata:
       m_Items: []
   - m_Id: 55469774921728
@@ -284,6 +284,10 @@ MonoBehaviour:
     m_Localized: That's it! We're completely full! There's no more room in us, but
       here SHE is! We call her Helleanor von Turkeyton the Third! The final boss
       of the game, by the way
+    m_Metadata:
+      m_Items: []
+  - m_Id: 321847039811584
+    m_Localized: New levels are coming soon
     m_Metadata:
       m_Items: []
   references:

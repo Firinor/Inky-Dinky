@@ -4,128 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Assets-Shared.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English (en).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-English (en).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Russian (ru).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-String-Tables-Russian (ru).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/MainTable Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/MainTable Shared Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/MainTable_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/MainTable_en.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/MainTable_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/MainTable_ru.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Ad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Ad.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Biom1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Biom1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Biom2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Biom2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Biom3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Biom3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/back_icon_lineset_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/back_icon_lineset_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost01_select_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost01_select_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost01_shadow_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost01_shadow_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost02_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost02_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost02_select_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost02_select_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost02_shadow_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_butBoost02_shadow_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_eatShadow_UI-01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_eatShadow_UI-01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_eat_UI-01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_eat_UI-01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_frame01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_shadowUI-01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/game_inplay_shadowUI-01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/icon_ads_2_.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/icon_ads_2_.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/param01__23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/param01__23.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/window_picture_.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/window_picture_.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/window_picture_.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/window_picture_.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/G_BackGround_n_02_2_lvl1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/G_BackGround_n_02_2_lvl1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost01_select_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost01_select_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost01_shadow_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost01_shadow_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost02_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost02_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost02_select_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost02_select_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost02_shadow_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_butBoost02_shadow_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_eatShadow_UI-01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_eatShadow_UI-01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_eat_UI-01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_eat_UI-01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_shadowUI-01_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/game_inplay_shadowUI-01_.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/play_game_start menu1_asset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/play_game_start menu1_asset.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/play_game_start menu_asset1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Map/play_game_start menu_asset1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Materials/Custom_SpriteOutlineURP.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Materials/Custom_SpriteOutlineURP.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Materials/NewUnlitUniversalRenderPipelineShader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Materials/NewUnlitUniversalRenderPipelineShader.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Settings/setting_asset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Settings/setting_asset.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Settings/setting_background_asset.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Settings/setting_background_asset.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/UI/Win.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/UI/Win.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/UI/Резервная_копия_Tiles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/UI/Резервная_копия_Tiles.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/HouseMouseWorker_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/HouseMouseWorker_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_12.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_22.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_C_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_C_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_C_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_C_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/PlaypenSans-ExtraBold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/LongButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/LongButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/main_360731_original.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/main_360731_original.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/play_game_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/play_game_1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/unnamed 1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ToDestroy/unnamed 1.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Application/Audio/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -257,7 +136,7 @@
       <workItem from="1792782610822" duration="1569000" />
       <workItem from="1792965501277" duration="98000" />
       <workItem from="1793223574559" duration="3711000" />
-      <workItem from="1793277071119" duration="6606000" />
+      <workItem from="1793277071119" duration="7203000" />
     </task>
     <servers />
   </component>

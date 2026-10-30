@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 #if IS_YANDEX
 using YG;
@@ -226,6 +227,12 @@ public class WorkerManager : MonoBehaviour
         if(loseTimerTime > 0)
             return;
         
+        Lose();
+    }
+
+    [ContextMenu("Lose")]
+    private void Lose()
+    {
         LosePopup.SetActive(true);
         SoundManager.Instance.PlayLose();
     }
@@ -258,16 +265,29 @@ public class WorkerManager : MonoBehaviour
         LosePopup.SetActive(false);
         loseTimerTime = timerTime;
     }
-    
+
     private void CheckWin()
     {
-        if(MainImage.PixelCount > 0)
+        if (MainImage.PixelCount > 0)
             return;
+        
+        Win();
+    }
 
+    [ContextMenu("Win")]
+    public void Win()
+    {
         player.Level++;
         player.Save();
         SoundManager.Instance.PlayWin();
         WinPopup.SetActive(true);
+    }
+    
+    [ContextMenu("ResetProgress")]
+    public void ResetProgress()
+    {
+        player.ResetProgress();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private Worker GetWorker()

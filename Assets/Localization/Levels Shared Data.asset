@@ -255,6 +255,10 @@ MonoBehaviour:
     m_Key: Lore30
     m_Metadata:
       m_Items: []
+  - m_Id: 321847039811584
+    m_Key: ComingSoon
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

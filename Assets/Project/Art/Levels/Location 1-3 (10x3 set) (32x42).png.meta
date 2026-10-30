@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_0
+      name: bread
       rect:
         serializedVersion: 2
         x: 0
@@ -158,7 +158,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_1
+      name: Apple
       rect:
         serializedVersion: 2
         x: 32
@@ -180,7 +180,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_2
+      name: onion
       rect:
         serializedVersion: 2
         x: 64
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_3
+      name: Cabbage
       rect:
         serializedVersion: 2
         x: 96
@@ -224,7 +224,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_4
+      name: Carrot
       rect:
         serializedVersion: 2
         x: 128
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_5
+      name: Mushroom
       rect:
         serializedVersion: 2
         x: 160
@@ -268,7 +268,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_6
+      name: cucumbers
       rect:
         serializedVersion: 2
         x: 192
@@ -290,7 +290,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_7
+      name: Meat
       rect:
         serializedVersion: 2
         x: 224
@@ -312,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_8
+      name: Grapes
       rect:
         serializedVersion: 2
         x: 256
@@ -334,7 +334,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_9
+      name: Pumpkin
       rect:
         serializedVersion: 2
         x: 288
@@ -356,7 +356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_10
+      name: Chicken leg
       rect:
         serializedVersion: 2
         x: 0
@@ -378,7 +378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_11
+      name: Cheese
       rect:
         serializedVersion: 2
         x: 32
@@ -400,7 +400,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_12
+      name: Donut
       rect:
         serializedVersion: 2
         x: 64
@@ -422,7 +422,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_13
+      name: Hot dogs
       rect:
         serializedVersion: 2
         x: 96
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_14
+      name: Hamburger
       rect:
         serializedVersion: 2
         x: 128
@@ -466,7 +466,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_15
+      name: French fries
       rect:
         serializedVersion: 2
         x: 160
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_16
+      name: Nachos
       rect:
         serializedVersion: 2
         x: 192
@@ -510,7 +510,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_17
+      name: Pizza
       rect:
         serializedVersion: 2
         x: 224
@@ -532,7 +532,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_18
+      name: Ice cream
       rect:
         serializedVersion: 2
         x: 256
@@ -554,7 +554,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_19
+      name: Cake
       rect:
         serializedVersion: 2
         x: 288
@@ -576,7 +576,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_20
+      name: Vegetable quiche
       rect:
         serializedVersion: 2
         x: 0
@@ -598,7 +598,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_21
+      name: Salad
       rect:
         serializedVersion: 2
         x: 32
@@ -620,7 +620,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_22
+      name: Shrimp
       rect:
         serializedVersion: 2
         x: 64
@@ -642,7 +642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_23
+      name: Rolls
       rect:
         serializedVersion: 2
         x: 96
@@ -664,7 +664,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_24
+      name: Pancakes
       rect:
         serializedVersion: 2
         x: 128
@@ -686,7 +686,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_25
+      name: Ramen
       rect:
         serializedVersion: 2
         x: 160
@@ -708,7 +708,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_26
+      name: Chocolate cake
       rect:
         serializedVersion: 2
         x: 192
@@ -730,7 +730,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_27
+      name: Beef Wellington
       rect:
         serializedVersion: 2
         x: 224
@@ -752,7 +752,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_28
+      name: Red and black caviar
       rect:
         serializedVersion: 2
         x: 256
@@ -774,7 +774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Location 1-3 (10x3 set) (32x42)_29
+      name: Royal Turkey
       rect:
         serializedVersion: 2
         x: 288
@@ -811,36 +811,36 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":42.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":1.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":2,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Location 1-3 (10x3 set) (32x42)_0: -1622026664
-      Location 1-3 (10x3 set) (32x42)_1: -151577215
-      Location 1-3 (10x3 set) (32x42)_10: 355849070
-      Location 1-3 (10x3 set) (32x42)_11: -572877058
-      Location 1-3 (10x3 set) (32x42)_12: -2124356035
-      Location 1-3 (10x3 set) (32x42)_13: 839571960
-      Location 1-3 (10x3 set) (32x42)_14: -1573472907
-      Location 1-3 (10x3 set) (32x42)_15: 762193329
-      Location 1-3 (10x3 set) (32x42)_16: 1879429241
-      Location 1-3 (10x3 set) (32x42)_17: -500161791
-      Location 1-3 (10x3 set) (32x42)_18: 2086440396
-      Location 1-3 (10x3 set) (32x42)_19: -1953628022
-      Location 1-3 (10x3 set) (32x42)_2: -1399129830
-      Location 1-3 (10x3 set) (32x42)_20: -1938065555
-      Location 1-3 (10x3 set) (32x42)_21: 1912794082
-      Location 1-3 (10x3 set) (32x42)_22: -884069213
-      Location 1-3 (10x3 set) (32x42)_23: 777154943
-      Location 1-3 (10x3 set) (32x42)_24: -1126314196
-      Location 1-3 (10x3 set) (32x42)_25: 695822297
-      Location 1-3 (10x3 set) (32x42)_26: -2105328979
-      Location 1-3 (10x3 set) (32x42)_27: -460458146
-      Location 1-3 (10x3 set) (32x42)_28: 1660424090
-      Location 1-3 (10x3 set) (32x42)_29: 2101482025
-      Location 1-3 (10x3 set) (32x42)_3: -798634427
-      Location 1-3 (10x3 set) (32x42)_4: -1698945768
-      Location 1-3 (10x3 set) (32x42)_5: -1791936619
-      Location 1-3 (10x3 set) (32x42)_6: -1475339819
-      Location 1-3 (10x3 set) (32x42)_7: -2069003907
-      Location 1-3 (10x3 set) (32x42)_8: 1951388181
-      Location 1-3 (10x3 set) (32x42)_9: 557008479
+      Apple: -151577215
+      Beef Wellington: -460458146
+      Cabbage: -798634427
+      Cake: -1953628022
+      Carrot: -1698945768
+      Cheese: -572877058
+      Chicken leg: 355849070
+      Chocolate cake: -2105328979
+      Donut: -2124356035
+      French fries: 762193329
+      Grapes: 1951388181
+      Hamburger: -1573472907
+      Hot dogs: 839571960
+      Ice cream: 2086440396
+      Meat: -2069003907
+      Mushroom: -1791936619
+      Nachos: 1879429241
+      Pancakes: -1126314196
+      Pizza: -500161791
+      Pumpkin: 557008479
+      Ramen: 695822297
+      Red and black caviar: 1660424090
+      Rolls: 777154943
+      Royal Turkey: 2101482025
+      Salad: 1912794082
+      Shrimp: -884069213
+      Vegetable quiche: -1938065555
+      bread: -1622026664
+      cucumbers: -1475339819
+      onion: -1399129830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

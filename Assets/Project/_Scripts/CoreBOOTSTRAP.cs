@@ -1,5 +1,6 @@
 using System.Collections;
 using FirAnimations;
+using TMPro;
 using UnityEngine;
 #if IS_YANDEX
 using YG;
@@ -10,7 +11,7 @@ public class CoreBOOTSTRAP : MonoBehaviour
     public MainImageManager MainImageManager;
     public ColorJarsManager ColorJarsManager;
     public WorkerManager WorkerManager;
-
+    
     [SerializeField] 
     private Settings settings;
     
@@ -37,7 +38,7 @@ public class CoreBOOTSTRAP : MonoBehaviour
         YG2.GameReadyAPI();
 #endif
     }
-    
+
     private void LoadPlayerData()
     {
         player = SaveData.GetPlayer();

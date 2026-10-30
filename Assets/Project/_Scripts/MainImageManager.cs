@@ -2,7 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class MainImageManager : MonoBehaviour
@@ -14,7 +17,11 @@ public class MainImageManager : MonoBehaviour
     public Transform UperRightCorner;
     public Vector2 MainImageSize;
     public float deltaX;
-
+    
+    public TextMeshProUGUI LevelName;
+    public TextMeshProUGUI LevelLore;
+    public GameObject LoreGameObject;
+    
     public Sprite[] Levels;
     public Image Background;
     
@@ -39,10 +46,31 @@ public class MainImageManager : MonoBehaviour
         }
 
         if (isOverLevel)
+        {
             MainSprite = GetRandomColorLevel(Levels[level]);
+            LevelLore.GetComponent<LocalizeStringEvent>().enabled = false;
+            LevelLore.text = String.Empty;
+            LoreGameObject.SetActive(false);
+        }
         else
+        {
             MainSprite = Levels[level];
+            SetLevelStrings(level);
+        }
         StartCoroutine(LoadBackground(level));
+    }
+
+    private void SetLevelStrings(int level)
+    {
+        level++;//The level count starts not from 0, but from 1
+        string localizedText = LocalizationSettings.StringDatabase
+            .GetLocalizedString("Levels", "Level"+level);
+        LevelName.text = localizedText;
+        LevelName.GetComponent<LocalizeStringEvent>().StringReference.SetReference("Levels", "Level"+level);
+        string localizedText2 = LocalizationSettings.StringDatabase
+            .GetLocalizedString("Levels", "Lore"+level);
+        LevelLore.text = localizedText2;
+        LevelLore.GetComponent<LocalizeStringEvent>().StringReference.SetReference("Levels", "Lore"+level);
     }
 
     private IEnumerator LoadBackground(int level)
