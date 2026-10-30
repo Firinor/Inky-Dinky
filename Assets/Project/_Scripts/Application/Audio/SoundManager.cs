@@ -12,6 +12,10 @@ public class SoundManager : MonoBehaviour
    private AudioConfig config;
    [SerializeField]
    private List<AudioSource> audioPool;
+   [SerializeField]
+   private AudioSource hrumAudioSource;
+
+   private Coroutine hrumCoroutine;
    private int soundIndex;
 
    private const float buttonClickDelay = .2f;
@@ -64,7 +68,15 @@ public class SoundManager : MonoBehaviour
    }
    public void PlayWorkerEat(Vector3 position = default)
    {
-      Play(position, config.WorkerEat, isPriority: true);
+      hrumAudioSource.gameObject.SetActive(true);
+      //source.transform.position = position;
+      hrumAudioSource.pitch = 1 + Random.Range(-0.05f, 0.05f);
+      hrumAudioSource.volume = config.WorkerEat.Volume;
+      
+      hrumAudioSource.PlayOneShot(config.WorkerEat.Clip);
+
+      if(hrumCoroutine is null)
+         hrumCoroutine = StartCoroutine(DisableAudioSource(hrumAudioSource));
    }
    public void PlayWin(Vector3 position = default)
    {
@@ -112,5 +124,7 @@ public class SoundManager : MonoBehaviour
       }
       
       source.gameObject.SetActive(false);
+      if (source == hrumAudioSource)
+         hrumCoroutine = null;
    }
 }

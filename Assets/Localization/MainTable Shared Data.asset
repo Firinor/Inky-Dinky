@@ -31,6 +31,14 @@ MonoBehaviour:
     m_Key: Start
     m_Metadata:
       m_Items: []
+  - m_Id: 11577156316094464
+    m_Key: Win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11577216596631552
+    m_Key: Lose
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -52,11 +52,13 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 512b15bbf08b0f64593ff205e4297f1f, type: 3}
     Volume: 0.02
   Win:
-    Clips: []
-    Volume: 0
+    Clips:
+    - {fileID: 8300000, guid: 1ef30b261f055b74d82fc359cfb2bc86, type: 3}
+    Volume: 1
   Lose:
-    Clips: []
-    Volume: 0
+    Clips:
+    - {fileID: 8300000, guid: 1641a249abbc227479f6c9319dcd8160, type: 3}
+    Volume: 1
   Unlock:
     Clips: []
     Volume: 0

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,7 +16,6 @@ public class MainImageManager : MonoBehaviour
     public float deltaX;
 
     public Sprite[] Levels;
-    public Sprite[] Bioms;
     public Image Background;
     
     public static Sprite MainSprite;
@@ -28,7 +28,7 @@ public class MainImageManager : MonoBehaviour
         LoadLevel(player.Level);
         CreateMainImage();
     }
-    
+
     private void LoadLevel(int level)
     {
         bool isOverLevel = false;
@@ -37,11 +37,19 @@ public class MainImageManager : MonoBehaviour
             level = UnityEngine.Random.Range(0, Levels.Length);
             isOverLevel = true;
         }
+
         if (isOverLevel)
             MainSprite = GetRandomColorLevel(Levels[level]);
         else
             MainSprite = Levels[level];
-        Background.sprite = Bioms[level % Bioms.Length];
+        StartCoroutine(LoadBackground(level));
+    }
+
+    private IEnumerator LoadBackground(int level)
+    {
+        ResourceRequest  loadResult = Resources.LoadAsync<Sprite>("Bioms/" + (level / 10));
+        yield return loadResult;
+        Background.sprite = loadResult.asset as Sprite;
     }
     
     private Sprite GetRandomColorLevel(Sprite source, float tolerance = 0.01f)

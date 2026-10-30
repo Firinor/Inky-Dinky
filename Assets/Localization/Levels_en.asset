@@ -1,0 +1,291 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Levels_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: aab49e8334510db45a6b4280d47c74ce, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12754542592
+    m_Localized: Lvl 1. Stale Bread
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55427773161472
+    m_Localized: Lvl 2. Youpple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55441320763392
+    m_Localized: Lvl 3. Nuclear Onion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55445217271808
+    m_Localized: Lvl 4. Straight-Up Cabbage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55449038282752
+    m_Localized: Lvl 5. Vitamin Carrot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55451554865152
+    m_Localized: Lvl 6. Totally Unsuspicious Mushroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55454469906432
+    m_Localized: Lvl 7. A Bowl Of Condemning Cucumbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55455984050176
+    m_Localized: Lvl 8. Meat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55457661771776
+    m_Localized: Lvl 9. Grapes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55459205275648
+    m_Localized: Lvl 10. Spooky Pumpkin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55460853637120
+    m_Localized: Lvl 11. Cheese
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55463433134080
+    m_Localized: Lvl 12. Donut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55465010192384
+    m_Localized: Lvl 13. Hamburger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55466557890560
+    m_Localized: Lvl 14. French fries
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55468164308992
+    m_Localized: Lvl 15. Chips
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55469774921728
+    m_Localized: Lvl 16. Pizza
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55472325058560
+    m_Localized: Lvl 17. Chicken leg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55473902116864
+    m_Localized: Lvl 18. Ice cream
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55475445620736
+    m_Localized: Lvl 19. Hot dogs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55477022679040
+    m_Localized: Lvl 20. Cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55478566182912
+    m_Localized: Lvl 21. Vegetable quiche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55926924697600
+    m_Localized: Lvl 22. Salad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55960575598592
+    m_Localized: Lvl 23. Shrimp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55964199477248
+    m_Localized: Lvl 24. Rolls
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55967018049536
+    m_Localized: Lvl 25. Pancakes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55976044191744
+    m_Localized: Lvl 26. Ramen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55982113349632
+    m_Localized: Lvl 27. Chocolate cake
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55988329308160
+    m_Localized: Lvl 28. Beef Wellington
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55991957381120
+    m_Localized: Lvl 29. Red and black caviar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55998525661184
+    m_Localized: Lvl 30. Royal turkey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35772882944
+    m_Localized: We're hungry little mice, if only we could find at least a bread
+      crumb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55437331980288
+    m_Localized: Now we're full, but we wouldn't say no to a bite of an apple
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55443283697664
+    m_Localized: And here's an onion that makes rivers of tears pour. To keep from
+      crying, we've got to eat it too!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55447226343424
+    m_Localized: "I heard cabbage \u2014 aka greens - 'totally' solves a bunch of
+      problems. So let's stock up on it, just in case"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55450313351168
+    m_Localized: Carrots are packed with vitamin "A." The most beneficial vitamin!
+      Let's take care of our health
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55452796379136
+    m_Localized: We're not sure if these mushrooms are edible. But there's only one
+      way to find out. Let's run a scientific experiment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55455245852672
+    m_Localized: I feel like this bowl of cucumbers just gave us a dirty look. Folks,
+      let's go sort this out
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55456822910976
+    m_Localized: 'A scout mouse got stuck in the meat. There are two ways to pull
+      him out: carefully and quickly. Bro, we''re already on our way, hang in there!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55458399969280
+    m_Localized: They say grapes are the future wine. And we're against drinking!
+      We'll have to eat them now, before they get covered in a glass bottle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55460010582016
+    m_Localized: We've always been afraid of these scary pumpkins! Especially on
+      Halloween. But today we're ready to face our fears
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55461788966912
+    m_Localized: "The smell of this cheese is making the wallpaper slide off the
+      walls \u2014 we need to eat it urgently to save the interior"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55464238440448
+    m_Localized: They say if you get the hole from a donut, you'll become happy.
+      Worth a try
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55465781944320
+    m_Localized: It has meat, vegetables, and bread. That's a balanced meal! Dietitians
+      approve. Well, we hope so
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55467321253888
+    m_Localized: We have a new super-important mission. We need to hide the potato
+      stick so that nobody finds it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55468965421056
+    m_Localized: Unfortunately, we eat not only when we're hungry, but also when
+      we're full
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55470643142656
+    m_Localized: "The world is very strange: the pizza box is square, the pizza itself
+      is round, the slices are triangular, and my jokes are flat\u2026"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55473096810496
+    m_Localized: Just look at those legs! Damn! Beautiful! Tanned! Shiny! How can
+      anyone resist them?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55474678063104
+    m_Localized: "It's suddenly gotten hot \u2014 we need to cool down with something"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55476188012544
+    m_Localized: It's suddenly gotten cold for some reason. Strange. We need to warm
+      up with something
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55477827985408
+    m_Localized: We've decided to go on a diet. But first we need to finish everything
+      left in the house. So it doesn't go to waste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55479371489280
+    m_Localized: To lose weight we'll eat only diet food! Here, for example, quiche.
+      With cheese, sour cream, crispy pastry, and tomatoes! It has diet peppers in
+      it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55933631389696
+    m_Localized: Looks like the previous dish didn't help us lose weight, so let's
+      try eating another dish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55963457085440
+    m_Localized: Why does everyone love these hunched-over not-quite-lobsters? We
+      should check
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55966313406464
+    m_Localized: This is a perishable product. So we need to devour them ASAP!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55969069064192
+    m_Localized: Experts say you can eat no more than 2-3 pancakes a day. But actually,
+      23 is written as one word
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55980003614720
+    m_Localized: Japanese people are slim! And Japanese people eat ramen! So ramen
+      is their secret to slimness! We've found it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55986479620096
+    m_Localized: We can go all day without eating cake! We have iron willpower! Oh!
+      And here comes nighttime
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55990275465216
+    m_Localized: "This isn't just meat, it's a work of art! We're partaking in the
+      sublime\u2026 and chewing a little"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55996780830720
+    m_Localized: Come up with a joke! Don't forget!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63040632053760
+    m_Localized: That's it! We're completely full! There's no more room in us, but
+      here SHE is! We call her Helleanor von Turkeyton the Third! The final boss
+      of the game, by the way
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

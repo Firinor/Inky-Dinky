@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Levels Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Levels
+  m_TableCollectionNameGuidString: aab49e8334510db45a6b4280d47c74ce
+  m_Entries:
+  - m_Id: 12754542592
+    m_Key: Level1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35772882944
+    m_Key: Lore1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55427773161472
+    m_Key: Level2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55437331980288
+    m_Key: Lore2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55441320763392
+    m_Key: Level3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55443283697664
+    m_Key: Lore3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55445217271808
+    m_Key: Level4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55447226343424
+    m_Key: Lore4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55449038282752
+    m_Key: Level5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55450313351168
+    m_Key: Lore5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55451554865152
+    m_Key: Level6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55452796379136
+    m_Key: Lore6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55454469906432
+    m_Key: Level7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55455245852672
+    m_Key: Lore7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55455984050176
+    m_Key: Level8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55456822910976
+    m_Key: Lore8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55457661771776
+    m_Key: Level9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55458399969280
+    m_Key: Lore9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55459205275648
+    m_Key: Level10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55460010582016
+    m_Key: Lore10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55460853637120
+    m_Key: Level11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55461788966912
+    m_Key: Lore11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55463433134080
+    m_Key: Level12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55464238440448
+    m_Key: Lore12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55465010192384
+    m_Key: Level13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55465781944320
+    m_Key: Lore13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55466557890560
+    m_Key: Level14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55467321253888
+    m_Key: Lore14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55468164308992
+    m_Key: Level15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55468965421056
+    m_Key: Lore15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55469774921728
+    m_Key: Level16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55470643142656
+    m_Key: Lore16
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55472325058560
+    m_Key: Level17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55473096810496
+    m_Key: Lore17
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55473902116864
+    m_Key: Level18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55474678063104
+    m_Key: Lore18
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55475445620736
+    m_Key: Level19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55476188012544
+    m_Key: Lore19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55477022679040
+    m_Key: Level20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55477827985408
+    m_Key: Lore20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55478566182912
+    m_Key: Level21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55479371489280
+    m_Key: Lore21
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55926924697600
+    m_Key: Level22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55933631389696
+    m_Key: Lore22
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55960575598592
+    m_Key: Level23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55963457085440
+    m_Key: Lore23
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55964199477248
+    m_Key: Level24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55966313406464
+    m_Key: Lore24
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55967018049536
+    m_Key: Level25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55969069064192
+    m_Key: Lore25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55976044191744
+    m_Key: Level26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55980003614720
+    m_Key: Lore26
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55982113349632
+    m_Key: Level27
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55986479620096
+    m_Key: Lore27
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55988329308160
+    m_Key: Level28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55990275465216
+    m_Key: Lore28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55991957381120
+    m_Key: Level29
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55996780830720
+    m_Key: Lore29
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55998525661184
+    m_Key: Level30
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63040632053760
+    m_Key: Lore30
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1341408153491210312
+  references:
+    version: 2
+    RefIds:
+    - rid: 1341408153491210312
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1793280428671
