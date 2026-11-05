@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using FirAnimations;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,7 @@ using Random = UnityEngine.Random;
 public class WorkerManager : MonoBehaviour
 {
     public WorkerPlace[] Places;
+    public TextMeshProUGUI progressText;
     public Worker WorkerPerfab;
     public Transform WorkerPool;
     public Transform PointyPool;
@@ -34,7 +36,8 @@ public class WorkerManager : MonoBehaviour
     
     private List<Worker> workers;
     private SaveData player;
-    
+
+    private float progressCount;
     private int workerCount = 0;
     private float timerTime = 2f;
     private float loseTimerTime;
@@ -46,6 +49,7 @@ public class WorkerManager : MonoBehaviour
         this.player = player;
         enabled = true;
         loseTimerTime = timerTime;
+        progressCount = MainImage.PixelCount;
         foreach (WorkerPlace workerPlace in Places)
         {
             workerPlace.Initialize();
@@ -131,6 +135,7 @@ public class WorkerManager : MonoBehaviour
             }
 
             loseTimerTime = timerTime;
+            workerPlace.bar.ZoomAnimation.Play();
             workerPlace.bar.Count--;
             workerPlace.bar.Text.text = workerPlace.bar.Count.ToString();
             
@@ -173,6 +178,7 @@ public class WorkerManager : MonoBehaviour
             {
                 workerCount--;
                 MainImage.PixelCount--;
+                progressText.text = (int)(MainImage.PixelCount / progressCount * 100) + "%";
                 targer.Eat();
                 CheckWin();
             };

@@ -44,13 +44,13 @@ MonoBehaviour:
   WorkerSpawn:
     Clips:
     - {fileID: 8300000, guid: 322ee7294128f144ba868f77a169c5c3, type: 3}
-    Volume: 0.3
+    Volume: 0.15
   WorkerEat:
     Clips:
     - {fileID: 8300000, guid: 77803d4cab7b656488a16389e2b2395d, type: 3}
     - {fileID: 8300000, guid: 8ed3ae40803775d42968d504c276ccad, type: 3}
     - {fileID: 8300000, guid: 512b15bbf08b0f64593ff205e4297f1f, type: 3}
-    Volume: 0.02
+    Volume: 0.03
   Win:
     Clips:
     - {fileID: 8300000, guid: 1ef30b261f055b74d82fc359cfb2bc86, type: 3}

@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="" />
+    <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/icon_pixel_.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/icon_pixel_.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/HouseMouseWorker_22.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/HouseMouseWorker_22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/HouseMouseWorker_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/HouseMouseWorker_22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_A_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/TarnationSans-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/TarnationSans-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,6 +153,7 @@
       <workItem from="1793223574559" duration="3711000" />
       <workItem from="1793277071119" duration="7203000" />
       <workItem from="1793351703327" duration="6503000" />
+      <workItem from="1793909423938" duration="2362000" />
     </task>
     <servers />
   </component>
