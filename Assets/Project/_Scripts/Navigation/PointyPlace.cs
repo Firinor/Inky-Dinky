@@ -25,6 +25,7 @@ public class PointyPlace : MonoBehaviour
     public void Eat()
     {
         Renderer.enabled = false;
+        transform.ClearAll(instant: true);
     }
 
     public void CheckWayCost()
