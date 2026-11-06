@@ -42,6 +42,18 @@ MonoBehaviour:
     m_Localized: GIVE UP?
     m_Metadata:
       m_Items: []
+  - m_Id: 14529162748026880
+    m_Localized: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14529323935129600
+    m_Localized: Revive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14530549544312832
+    m_Localized: Next
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

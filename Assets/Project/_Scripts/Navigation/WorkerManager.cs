@@ -31,8 +31,9 @@ public class WorkerManager : MonoBehaviour
     private bool isWorkersSpeed = false;
     public float fastWorkersSpawnMultiplicator = 2;
     
-    public GameObject WinPopup;
-    public GameObject LosePopup;
+    public GameObject WinLoseBackground;
+    public FirZoomAnimation WinPopup;
+    public FirZoomAnimation LosePopup;
     
     private List<Worker> workers;
     private SaveData player;
@@ -233,13 +234,16 @@ public class WorkerManager : MonoBehaviour
         if(loseTimerTime > 0)
             return;
         
+        if(WinLoseBackground.activeSelf)
+            return;
         Lose();
     }
 
     [ContextMenu("Lose")]
     private void Lose()
     {
-        LosePopup.SetActive(true);
+        WinLoseBackground.SetActive(true);
+        LosePopup.Play();
         SoundManager.Instance.PlayLose();
     }
 
@@ -268,7 +272,8 @@ public class WorkerManager : MonoBehaviour
         place.bar = null;
         place.isWarningNumber = int.MaxValue;
         ColorJarsManager.AddBar(chosen);
-        LosePopup.SetActive(false);
+        WinLoseBackground.SetActive(false);
+        LosePopup.ToStartPoint();
         loseTimerTime = timerTime;
     }
 
@@ -286,7 +291,8 @@ public class WorkerManager : MonoBehaviour
         player.Level++;
         player.Save();
         SoundManager.Instance.PlayWin();
-        WinPopup.SetActive(true);
+        WinLoseBackground.SetActive(true);
+        WinPopup.Play();
     }
     
     [ContextMenu("ResetProgress")]

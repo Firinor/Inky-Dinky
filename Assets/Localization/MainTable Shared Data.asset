@@ -39,6 +39,18 @@ MonoBehaviour:
     m_Key: Lose
     m_Metadata:
       m_Items: []
+  - m_Id: 14529162748026880
+    m_Key: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14529323935129600
+    m_Key: Revive
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14530549544312832
+    m_Key: Next
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
