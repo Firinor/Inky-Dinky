@@ -26,7 +26,7 @@ public class WorkerManager : MonoBehaviour
     public float deltaColor = 0.1f;
 
     public int ColorBarCount;
-    public float fastWorkersSpeed = 6;
+    public float fastWorkersSpeed = 5;
     public float slowWorkersSpeed = 2;
     private bool isWorkersSpeed = false;
     public float fastWorkersSpawnMultiplicator = 2;
@@ -40,6 +40,7 @@ public class WorkerManager : MonoBehaviour
 
     private float progressCount;
     private int workerCount = 0;
+    private int workerNameCount = 0;
     private float timerTime = 2f;
     private float loseTimerTime;
 
@@ -101,7 +102,7 @@ public class WorkerManager : MonoBehaviour
             bar.PositionAnimation.Play();
             bar.ZoomAnimation.Play();
             ColorBarCount--;
-            if (ColorBarCount <= 0)
+            if (ColorBarCount <= 5)
                 isWorkersSpeed = true;
             return true;
         }
@@ -155,6 +156,7 @@ public class WorkerManager : MonoBehaviour
             };
             newWorker.OnStartEat = () =>
             {
+                //Debug.Log(newWorker.name);
                 Transform targetPlace = NoLockPlaces;
                 WorkerPlace targetWorkPlace = Places.FirstOrDefault(p => p.IsLocked);
                 if (targetWorkPlace != null)
@@ -315,6 +317,8 @@ public class WorkerManager : MonoBehaviour
         if (newWorker is null)
         {
             newWorker = Instantiate(WorkerPerfab, WorkerPool);
+            workerNameCount++;
+            newWorker.name = "Worker"+workerNameCount;
             newWorker.GetComponent<SpriteRenderer>().sortingOrder = workerSortingLayer;
             workerSortingLayer++;
         }

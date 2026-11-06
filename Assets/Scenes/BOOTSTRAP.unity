@@ -219,7 +219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22331464, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -630,7 +630,7 @@ PrefabInstance:
     - target: {fileID: 5422682627721976724, guid: bf3b4e58c3eaad0458f1d851a0f316c8, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: c6a7e16f53853174b8b269af28625e29, type: 3}
+      objectReference: {fileID: 8300000, guid: ae35384570b226c46aef9927916f33e6, type: 3}
     - target: {fileID: 5953344943314002560, guid: bf3b4e58c3eaad0458f1d851a0f316c8, type: 3}
       propertyPath: m_Name
       value: BackgroundMusic

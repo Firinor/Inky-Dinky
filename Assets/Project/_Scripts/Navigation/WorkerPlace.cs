@@ -15,6 +15,7 @@ public class WorkerPlace : MonoBehaviour
     public int isWarningNumber = int.MaxValue;
     public int UnlockCount;
     public int UnlockCounterForAnimations;
+    [SerializeField]
     private int unlockCount;
     public bool IsLocked = false;
     public Image LockImgage;
@@ -43,7 +44,7 @@ public class WorkerPlace : MonoBehaviour
             return;
         
         unlockCount += count;
-        LockImgage.fillAmount = unlockCount / (float)UnlockCount;
+        LockImgage.fillAmount = unlockCount / (UnlockCount*3f);//3f - is a FlyLootManager.instance.AnimateGoods(targer.Renderer, 3);
         if(LockImgage.fillAmount < 1)
             return;
 

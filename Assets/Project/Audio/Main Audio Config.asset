@@ -53,11 +53,11 @@ MonoBehaviour:
     Volume: 0.03
   Win:
     Clips:
-    - {fileID: 8300000, guid: 1ef30b261f055b74d82fc359cfb2bc86, type: 3}
+    - {fileID: 8300000, guid: 9964ecfe25f599d4fb5cc6a2fad3d3e1, type: 3}
     Volume: 1
   Lose:
     Clips:
-    - {fileID: 8300000, guid: 1641a249abbc227479f6c9319dcd8160, type: 3}
+    - {fileID: 8300000, guid: 8c4151c4c7547644095ca60d48bedd22, type: 3}
     Volume: 1
   Unlock:
     Clips: []

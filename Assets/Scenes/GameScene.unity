@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 30688810}
   - component: {fileID: 30688809}
   m_Layer: 5
-  m_Name: Worker21
+  m_Name: Worker2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,6 +353,7 @@ MonoBehaviour:
   isWarningNumber: 2147483647
   UnlockCount: 0
   UnlockCounterForAnimations: 0
+  unlockCount: 0
   IsLocked: 0
   LockImgage: {fileID: 0}
   LockObject: {fileID: 0}
@@ -2498,7 +2499,7 @@ GameObject:
   - component: {fileID: 351243241}
   - component: {fileID: 351243243}
   m_Layer: 5
-  m_Name: Worker2
+  m_Name: Worker1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2579,6 +2580,7 @@ MonoBehaviour:
   isWarningNumber: 2147483647
   UnlockCount: 0
   UnlockCounterForAnimations: 0
+  unlockCount: 0
   IsLocked: 0
   LockImgage: {fileID: 0}
   LockObject: {fileID: 0}
@@ -4915,9 +4917,9 @@ MonoBehaviour:
   NoLockPlaces: {fileID: 769764949}
   deltaColor: 0.3
   ColorBarCount: 0
-  fastWorkersSpeed: 6
+  fastWorkersSpeed: 3.5
   slowWorkersSpeed: 2
-  fastWorkersSpawnMultiplicator: 2
+  fastWorkersSpawnMultiplicator: 1.4
   WinLoseBackground: {fileID: 1426005687}
   WinPopup: {fileID: 1765329129}
   LosePopup: {fileID: 1006784894}
@@ -5667,8 +5669,9 @@ MonoBehaviour:
   bar: {fileID: 0}
   cooldown: 0
   isWarningNumber: 2147483647
-  UnlockCount: 1202
-  UnlockCounterForAnimations: 1
+  UnlockCount: 400
+  UnlockCounterForAnimations: 0
+  unlockCount: 0
   IsLocked: 1
   LockImgage: {fileID: 2042681289}
   LockObject: {fileID: 1710046768}
@@ -6223,7 +6226,7 @@ RectTransform:
   m_GameObject: {fileID: 1006784890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1223236736}
@@ -6539,7 +6542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: "\u0414\u0430\u043B\u044C\u0448\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3d6e3c4017fc94f4589c24d80ab25668, type: 2}
   m_sharedMaterial: {fileID: 4666594462235280115, guid: 3d6e3c4017fc94f4589c24d80ab25668, type: 2}
@@ -7456,7 +7459,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: -9.9, y: -142.70001}
-  m_SizeDelta: {x: 375.68, y: 167.19}
+  m_SizeDelta: {x: 410, y: 167.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296136059
 MonoBehaviour:
@@ -8701,7 +8704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1425797845
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9543,7 +9546,7 @@ GameObject:
   - component: {fileID: 1655366004}
   - component: {fileID: 1655366003}
   m_Layer: 5
-  m_Name: Worker5 (1)
+  m_Name: Worker6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9585,8 +9588,9 @@ MonoBehaviour:
   bar: {fileID: 0}
   cooldown: 0
   isWarningNumber: 2147483647
-  UnlockCount: 2000
-  UnlockCounterForAnimations: 1
+  UnlockCount: 400
+  UnlockCounterForAnimations: 0
+  unlockCount: 0
   IsLocked: 1
   LockImgage: {fileID: 196423707}
   LockObject: {fileID: 1598677741}
@@ -10950,8 +10954,9 @@ MonoBehaviour:
   bar: {fileID: 0}
   cooldown: 0
   isWarningNumber: 2147483647
-  UnlockCount: 202
-  UnlockCounterForAnimations: 1
+  UnlockCount: 100
+  UnlockCounterForAnimations: 0
+  unlockCount: 0
   IsLocked: 1
   LockImgage: {fileID: 2099898796}
   LockObject: {fileID: 969003784}
@@ -12487,8 +12492,9 @@ MonoBehaviour:
   bar: {fileID: 0}
   cooldown: 0
   isWarningNumber: 2147483647
-  UnlockCount: 602
-  UnlockCounterForAnimations: 1
+  UnlockCount: 200
+  UnlockCounterForAnimations: 0
+  unlockCount: 0
   IsLocked: 1
   LockImgage: {fileID: 607407370}
   LockObject: {fileID: 88532241}
