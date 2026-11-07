@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FirAnimations;
 using UnityEngine;
 using UnityEngine.UI;
 #if IS_YANDEX
@@ -21,6 +22,8 @@ public class WorkerPlace : MonoBehaviour
     public Image LockImgage;
     public GameObject LockObject;
 
+    public FirZoomAnimation endZoom;
+    
     public void Initialize()
     {
         if(LockImgage == null)
@@ -54,7 +57,12 @@ public class WorkerPlace : MonoBehaviour
     public void DoDestroy()
     {
         IsLocked = false;
-        Destroy(LockObject);
+        endZoom.OnComplete = () =>
+        {
+            endZoom.OnComplete = null;
+            Destroy(LockObject);
+        };
+        endZoom.Play();
     }
 
     public void HandleUpdate(float multiplicator = 1)

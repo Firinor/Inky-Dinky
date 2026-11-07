@@ -102,7 +102,7 @@ public class WorkerManager : MonoBehaviour
             bar.PositionAnimation.Play();
             bar.ZoomAnimation.Play();
             ColorBarCount--;
-            if (ColorBarCount <= 5)
+            if (ColorBarCount <= 0)
                 isWorkersSpeed = true;
             return true;
         }

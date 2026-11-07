@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using FirAnimations;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Worker : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class Worker : MonoBehaviour
     public void ToStart()
     {
         wayIndex = 0;
-        flipTimer = flipTime;
+        flipTimer = flipTime * Random.value;
         LookToTarget();
         frameIndex = 0;
         Sprite.sprite = MoveFrames[0];

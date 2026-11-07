@@ -54,6 +54,7 @@ public class MainImageManager : MonoBehaviour
         }
         else
         {
+            LoreGameObject.SetActive(true);
             MainSprite = Levels[level];
             SetLevelStrings(level);
         }

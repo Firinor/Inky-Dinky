@@ -21,6 +21,9 @@ public class CoreBOOTSTRAP : MonoBehaviour
     
     IEnumerator Start()
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60; 
+        
         closeСurtain.Initialize();
     
         yield return null;

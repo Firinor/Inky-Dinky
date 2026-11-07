@@ -6,12 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="24774433-16e9-4d29-b31f-2708057bbcb6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Inky-Dinky/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FirAnimations/FlyLoot/FlyGood.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PluginYourGames/Editor/SavesEditorYG2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Audio/Main Audio Config.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Levels/Location 1-3 (10x3 set) (32x42).png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Levels/Location 1-3 (10x3 set) (32x42).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Art/Worker/MouseWorker_B_12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/Coiny-ExtraBold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Font/TarnationSans-Regular SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Font/TarnationSans-Regular SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Pointy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Pointy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Worker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/CoreBOOTSTRAP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/MainImageManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/Worker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/_Scripts/Navigation/WorkerPlace.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/BOOTSTRAP.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +155,8 @@
       <workItem from="1793277071119" duration="7203000" />
       <workItem from="1793351703327" duration="6503000" />
       <workItem from="1793909423938" duration="2362000" />
-      <workItem from="1793973858342" duration="6196000" />
+      <workItem from="1793973858342" duration="6238000" />
+      <workItem from="1794081891504" duration="702000" />
     </task>
     <servers />
   </component>
