@@ -15,21 +15,21 @@ public class ReviewYG : MonoBehaviour
         if (YG2.reviewCanShow)
             reviewButton.onClick.AddListener(YG2.ReviewShow);
         else
-            Destroy(gameObject);
+            Destroy(reviewButton);
 #else
-        Destroy(gameObject);        
+        Destroy(reviewButton);        
 #endif
     }
 
     private void ReviewSent(bool sent)
     {
         if (sent)
-            Destroy(gameObject);
+            Destroy(reviewButton);
     }
     
     private void OnDestroy()
     {
-        reviewButton.onClick.RemoveAllListeners();
+        reviewButton?.onClick.RemoveAllListeners();
 #if IS_YANDEX
         YG2.onReviewSent -= ReviewSent;
 #endif
