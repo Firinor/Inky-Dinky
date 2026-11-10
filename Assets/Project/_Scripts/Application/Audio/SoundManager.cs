@@ -62,6 +62,13 @@ public class SoundManager : MonoBehaviour
    {
       Play(position, config.BarDespawn, isPriority: true);
    }
+   private IEnumerator PlayDelay(ClipSettings clipData, float delay, float volumeMultiplier = 1)
+   {
+      yield return new WaitForSeconds(delay);
+      
+      Play(transform.position, config.BarDespawn, isPriority: true);
+   }
+   
    public void PlayWorkerSpawn(Vector3 position = default)
    {
       Play(position, config.WorkerSpawn, isPriority: true);

@@ -44,30 +44,34 @@ public class MainImageManager : MonoBehaviour
             level = UnityEngine.Random.Range(0, Levels.Length);
             isOverLevel = true;
         }
-
+        
         if (isOverLevel)
         {
             MainSprite = GetRandomColorLevel(Levels[level]);
-            LevelLore.GetComponent<LocalizeStringEvent>().enabled = false;
-            LevelLore.text = String.Empty;
+            SetLoreText(level);
             LoreGameObject.SetActive(false);
         }
         else
         {
-            LoreGameObject.SetActive(true);
             MainSprite = Levels[level];
-            SetLevelStrings(level);
+            SetLevelText(level);
+            SetLoreText(level);
+            LoreGameObject.SetActive(true);
         }
         StartCoroutine(LoadBackground(level));
     }
-
-    private void SetLevelStrings(int level)
+    
+    private void SetLevelText(int level)
     {
         level++;//The level count starts not from 0, but from 1
         string localizedText = LocalizationSettings.StringDatabase
             .GetLocalizedString("Levels", "Level"+level);
         LevelName.text = localizedText;
         LevelName.GetComponent<LocalizeStringEvent>().StringReference.SetReference("Levels", "Level"+level);
+    }
+    private void SetLoreText(int level)
+    {
+        level++;//The level count starts not from 0, but from 1
         string localizedText2 = LocalizationSettings.StringDatabase
             .GetLocalizedString("Levels", "Lore"+level);
         LevelLore.text = localizedText2;

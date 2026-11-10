@@ -39,12 +39,12 @@ MonoBehaviour:
     Volume: 1
   BarDespawn:
     Clips:
-    - {fileID: 8300000, guid: 4ae8462476de58c41bbedeaaa2fe185a, type: 3}
+    - {fileID: 8300000, guid: 3e5987641b7773642adb72e9623f03a4, type: 3}
     Volume: 1
   WorkerSpawn:
     Clips:
     - {fileID: 8300000, guid: 322ee7294128f144ba868f77a169c5c3, type: 3}
-    Volume: 0.15
+    Volume: 0.1
   WorkerEat:
     Clips:
     - {fileID: 8300000, guid: 77803d4cab7b656488a16389e2b2395d, type: 3}

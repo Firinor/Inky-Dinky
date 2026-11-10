@@ -34,6 +34,9 @@ public class WorkerPlace : MonoBehaviour
     
     public void UnlockADS()
     {
+        if(endZoom is null || endZoom.enabled)
+            return;
+        
 #if IS_YANDEX
         YG2.RewardedAdvShow("OpenWorkerPlace", DoDestroy);
 #else
@@ -59,10 +62,12 @@ public class WorkerPlace : MonoBehaviour
         IsLocked = false;
         endZoom.OnComplete = () =>
         {
-            endZoom.OnComplete = null;
+            if(endZoom is not null)
+                endZoom.OnComplete = null;
             Destroy(LockObject);
         };
         endZoom.Play();
+        SoundManager.Instance.PlayBarDespawn();
     }
 
     public void HandleUpdate(float multiplicator = 1)
